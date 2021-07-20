@@ -72,3 +72,20 @@ img {
   font-size: 3.1rem;
   font-weight: 700;
 }
+
+.pricing-button {
+  border: 1px solid #564fcc;
+  border-radius: 10px;
+  color: #6c63ff;
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 25px 0;
+  transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #564fcc;
+  color: #e1f1ff;
+}
