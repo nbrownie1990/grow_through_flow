@@ -89,3 +89,15 @@ img {
   background-color: #564fcc;
   color: #e1f1ff;
 }
+
+.pricing-button.is-featured {
+  background-color: #564fcc;
+  color: #e1f1ff;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+  border: 1px solid #564fcc;
+  background-color: #f0f0ff;
+  color: #6c63ff;
+}
