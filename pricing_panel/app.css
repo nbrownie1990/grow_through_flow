@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+  font-family: Open Sans, sans-serif;
+}
+
+body {
+  background-color: rgb(195, 176, 211);
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.panel {
+  background-color: white;
+}
