@@ -46,7 +46,7 @@ body {
 }
 
 .navbar.scrolled {
-  background: rgb(166, 232, 225);
+  background: rgba(166, 232, 225, 0.7);
   transition: background 0.8s;
 }
 
