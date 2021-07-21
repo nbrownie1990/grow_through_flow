@@ -5,6 +5,7 @@ body {
 
 .content {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .museum h2 {
@@ -45,7 +46,8 @@ body {
 }
 
 .navbar.scrolled {
-  background-color: turquoise;
+  background: rgb(166, 232, 225);
+  transition: background 0.8s;
 }
 
 @media (max-width: 1200px) {
