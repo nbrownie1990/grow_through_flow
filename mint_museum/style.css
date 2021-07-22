@@ -31,7 +31,7 @@ body {
 }
 
 #mainNavbar .nav-link:hover {
-  color: #d4e09b;
+  color: #2d6a4f;
 }
 
 #mainNavbar .navbar-brand {
@@ -48,7 +48,7 @@ body {
   color: #d4e09b;
 }
 
-.navbar.scrolled {
+.navbar .scrolled {
   background: rgba(166, 232, 225, 0.7);
   transition: background 0.8s;
 }
