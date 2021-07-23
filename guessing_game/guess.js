@@ -29,5 +29,4 @@ if (guess === "quit") {
 }
 
 let answerElement = document.getElementById("winner");
-answerElement.innerText =
-  "WINNER\n Your guess ${guess} is right!! \n You tried it ${attempts} times";
+answerElement.innerText = `WINNER\n Your guess ${guess} is right!! \n You tried it ${attempts} times`;
