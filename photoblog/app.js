@@ -6,7 +6,7 @@ panels.forEach((panel) => {
     panel.classList.add("active");
     document.getElementById(
       "nav"
-    ).innerText = `Hey ${panel.id} - you are looking soo good!`;
+    ).innerText = `hey ${panel.id} - you are looking soo good!`;
   });
 });
 
