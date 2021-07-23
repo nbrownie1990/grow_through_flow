@@ -9,12 +9,25 @@ const targetNum = Math.floor(Math.random() * maximum) + 1;
 let guess = parseInt(prompt("Enter your first guess:"));
 let attempts = 1;
 
-while (guess !== targetNum) {
+while (parseInt(guess) !== targetNum) {
+  if (guess === "quit") break;
   attempts++;
   if (guess > targetNum) {
-    guess = parseInt(prompt("Too high! Enter new guess:"));
+    guess = prompt(
+      "Too high! Enter new guess: (you can quit the game by typing 'quit')"
+    );
   } else {
-    guess = parseInt(prompt("Too low! Enter a new guess:"));
+    guess = prompt(
+      "Too low! Enter a new guess: (you can quit the game by typing 'quit')"
+    );
   }
 }
-console.log(`You got it! It took you ${attempts} guesses')
+if (guess === "quit") {
+  alert("OK, You Quit");
+} else {
+  alert("Congrats you win!");
+  alert("You got it! It took you ${attempts} guesses");
+}
+
+let answerElement = document.getElementById("winner");
+answerElement.innerText = guess;
