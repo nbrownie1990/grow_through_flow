@@ -92,8 +92,12 @@ p {
 
 .grid {
   display: grid;
+  text-align: center;
+}
+
+.grid--1x2 {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 10rem);
 }
 
 .astronaut-mirror {
