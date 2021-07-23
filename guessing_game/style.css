@@ -1,0 +1,30 @@
+html {
+  background-image: url(background-img.jpg);
+  background-position: center;
+}
+body {
+  width: 100%;
+  font-size: 64.5%;
+}
+
+p {
+  color: yellow;
+  position: relative;
+  font-size: 4.5rem;
+  font-family: "Zen Tokyo Zoo", cursive;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.astronaut {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}

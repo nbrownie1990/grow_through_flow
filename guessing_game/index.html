@@ -10,37 +10,38 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Guessing Game</title>
   </head>
+
   <body>
-    <style>
-      body {
-        background-image: url(background-img.jpg);
-        background-position: center;
-      }
-      p {
-        color: yellow;
-        border: violet;
-        position: relative;
-        font-size: 2.5rem;
-        font-family: "Zen Tokyo Zoo", cursive;
-        text-align: center;
-      }
-    </style>
-    <p id="winner">HELLO</p>
-    <iframe
-      src="https://giphy.com/embed/COOguXdgZ4hyyTI0Uf"
-      width="214"
-      height="280"
-      frameborder="0"
-      class="giphy-embed"
-      allowfullscreen
-    ></iframe>
-    <p>
-      <a
-        href="https://giphy.com/stickers/space-astronaut-cosmonaut-COOguXdgZ4hyyTI0Uf"
-      ></a>
-    </p>
+    <p id="winner"></p>
+
+    <div class="grid">
+      <div>
+        <iframe
+          src="https://giphy.com/embed/COOguXdgZ4hyyTI0Uf"
+          width="100%"
+          height="100%"
+          onmouseover="null"
+          onclick="null"
+          style="position: relative"
+          frameborder="0"
+        ></iframe>
+      </div>
+      <div>
+        <iframe
+          class="astronaut"
+          src="https://giphy.com/embed/COOguXdgZ4hyyTI0Uf"
+          width="100%"
+          height="100%"
+          onmouseover="null"
+          onclick="null"
+          style="position: relative"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
 
     <script src="guess.js"></script>
   </body>
