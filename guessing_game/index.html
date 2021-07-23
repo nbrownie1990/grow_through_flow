@@ -15,9 +15,13 @@
   </head>
 
   <body>
-    <p id="winner"></p>
-
+    <div><p id="winner"></p></div>
     <div class="grid">
+      <div>
+        <button class="glow-on-hover" type="button" onclick="startGame()">
+          Start Game
+        </button>
+      </div>
       <div>
         <iframe
           src="https://giphy.com/embed/COOguXdgZ4hyyTI0Uf"
@@ -31,7 +35,7 @@
       </div>
       <div>
         <iframe
-          class="astronaut"
+          class="astronaut-mirror"
           src="https://giphy.com/embed/COOguXdgZ4hyyTI0Uf"
           width="100%"
           height="100%"
@@ -42,7 +46,6 @@
         ></iframe>
       </div>
     </div>
-
     <script src="guess.js"></script>
   </body>
 </html>
