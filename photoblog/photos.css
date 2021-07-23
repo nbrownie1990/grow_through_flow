@@ -34,6 +34,7 @@ nav {
 }
 
 .panel.active {
+  position: static;
   z-index: 1;
   height: 100vh;
   transition: 0.8s;
@@ -66,7 +67,7 @@ nav {
   background-image: url("images/by_mikael _kristenson.webp");
   background-position: right;
 }
-.lama {
+.llama {
   background-image: url("images/by_pierre_borthiry.webp");
   background-position: center;
 }
