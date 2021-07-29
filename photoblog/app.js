@@ -5,7 +5,7 @@ cards.forEach((card) => {
     removeActiveClasses();
     card.classList.add("active");
     document.getElementById(
-      "nav"
+      "mule"
     ).innerText = `hey ${card.id} - you are looking soo good!`;
   });
 });
