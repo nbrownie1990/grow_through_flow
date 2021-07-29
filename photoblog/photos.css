@@ -25,6 +25,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   height: 45vh;
+  width: max-content;
   border-radius: 3.5rem;
   overflow: hidden;
   color: #fff;
@@ -62,6 +63,10 @@ card:focus-within {
   transition-delay: 0.5s;
 }
 
+.card:focus-within .card-content {
+  transition-duration: 0ms;
+}
+
 .card-content > *:not(.card-title) {
   opacity: 0;
   transition: opacity 0.5s linear;
@@ -97,6 +102,9 @@ card:focus-within {
 
 .card-body {
   color: rgb(255, 255, 255/ 0.85);
+  width: max-content;
+  height: 95%;
+  text-justify: distribute;
 }
 
 /*Button*/
