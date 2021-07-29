@@ -35,6 +35,7 @@ nav {
   background-repeat: no-repeat;
   height: 80vh;
   border-radius: 3.5rem;
+  overflow: hidden;
   color: #fff;
   cursor: pointer;
   margin: 1rem;
@@ -63,6 +64,7 @@ nav {
   left: calc(var(--padding) * -1);
   bottom: 0;
   width: calc(100% + var(--padding));
+  background: var(--clr-accent);
 }
 
 .card.active {
