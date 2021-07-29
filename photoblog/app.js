@@ -4,8 +4,8 @@ cards.forEach((card) => {
   card.addEventListener("click", () => {
     removeActiveClasses();
     card.classList.add("active");
-    document.getElementsByClassName(
-      "card-body"
+    document.getElementById(
+      "nav"
     ).innerText = `hey ${card.id} - you are looking soo good!`;
   });
 });
