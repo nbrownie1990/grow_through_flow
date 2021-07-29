@@ -1,6 +1,14 @@
 html {
   background-color: #161515;
+  --accent: hsl(142 90% 61%);
 }
+
+*,
+*::backdrop,
+*::after {
+  box-sizing: border-box;
+}
+
 nav {
   font-family: Raleway, sans-serif;
   color: #f1f1f1;
@@ -22,7 +30,7 @@ nav {
   justify-self: center;
 }
 
-.panel {
+.card {
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
@@ -33,8 +41,30 @@ nav {
   position: relative;
   -webkit-transition: all 0.7s ease-in;
 }
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% /0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% /1)
+  );
+}
+.card-title {
+  position: relative;
+  width: max-content;
+}
 
-.panel.active {
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: var;
+  bottom: 0;
+  width: 100%;
+}
+
+.card.active {
   position: static;
   z-index: 1;
   height: 100vh;
