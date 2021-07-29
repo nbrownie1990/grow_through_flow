@@ -1,6 +1,6 @@
 html {
   background-color: #161515;
-  --accent: hsl(142 90% 61%);
+  --clr-accent: hsl(142 90% 61%);
 }
 
 *,
@@ -30,6 +30,16 @@ nav {
   justify-self: center;
 }
 
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% /0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% /1)
+  );
+}
+
 .card {
   background-position: center;
   background-repeat: no-repeat;
@@ -41,15 +51,7 @@ nav {
   position: relative;
   -webkit-transition: all 0.7s ease-in;
 }
-.card-content {
-  --padding: 1.5rem;
-  padding: var(--padding);
-  background: linear-gradient(
-    hsl(0 0% 0% /0),
-    hsl(20 0% 0% / 0.3) 20%,
-    hsl(0 0% 0% /1)
-  );
-}
+
 .card-title {
   position: relative;
   width: max-content;

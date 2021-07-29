@@ -1,17 +1,17 @@
-const panels = document.querySelectorAll(".panel");
+const cards = document.querySelectorAll(".card");
 
-panels.forEach((panel) => {
-  panel.addEventListener("click", () => {
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
     removeActiveClasses();
-    panel.classList.add("active");
+    card.classList.add("active");
     document.getElementById(
       "nav"
-    ).innerText = `hey ${panel.id} - you are looking soo good!`;
+    ).innerText = `hey ${card.id} - you are looking soo good!`;
   });
 });
 
 function removeActiveClasses() {
-  panels.forEach((panel) => {
-    panel.classList.remove("active");
+  cards.forEach((card) => {
+    card.classList.remove("active");
   });
 }
