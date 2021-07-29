@@ -67,6 +67,10 @@ nav {
   background: var(--clr-accent);
 }
 
+.card-body {
+  color: rgb(255, 255, 255/ 0.85);
+}
+
 .card.active {
   position: static;
   z-index: 1;
