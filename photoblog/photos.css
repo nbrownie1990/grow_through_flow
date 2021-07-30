@@ -89,8 +89,6 @@ card:focus-within {
 
 .card-body {
   color: rgb(255, 255, 255/ 0.85);
-  width: max-content;
-  height: 95%;
   text-justify: distribute;
 }
 
