@@ -48,33 +48,12 @@ card:focus-within {
 .card-content {
   --padding: 1.5em;
   padding: var(--padding);
+  text-align: left;
   background: linear-gradient(
     hsl(0 0% 0% / 0),
     hsl(20 0% 0% / 0.3) 20%,
     hsl(0 0% 0% / 1)
   );
-  text-align: left;
-  transform: translateY(100%);
-  transition: transform 500ms ease;
-}
-.card:hover .card-content,
-.card:focus-within .card-content {
-  transform: translateY(0);
-  transition-delay: 0.5s;
-}
-
-.card:focus-within .card-content {
-  transition-duration: 0ms;
-}
-
-.card-content > *:not(.card-title) {
-  opacity: 0;
-  transition: opacity 0.5s linear;
-}
-
-.card:hover .card-content > *:not(.card-title) {
-  opacity: 1;
-  transition-delay: 1s;
 }
 
 .card-title {
@@ -95,8 +74,8 @@ card:focus-within {
   transform-origin: left;
   transition: transform 1.5s ease;
 }
-
-.card:hover .card-title::after {
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
   transform: scaleX(1);
 }
 
@@ -160,7 +139,38 @@ card:focus-within {
 .goat {
   background-image: url("images/by_skylar_jean.webp");
 }
+
+/*Media Queries*/
+
+@media (hover) {
+  .card-content {
+    transform: translateY(100%);
+    transition: transform 500ms ease;
+  }
+
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  .card:hover .card-content > *:not(.card-title),
+  .card:focus-within .card-content > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 1s;
+  }
+}
 /* 
+
 @media screen and (min-width: 320px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
