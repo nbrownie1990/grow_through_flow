@@ -70,7 +70,6 @@ card:focus-within {
   bottom: -2px;
   width: calc(100% + var(--padding));
   background: var(--clr-accent);
-  transform: scaleX(0);
   transform-origin: left;
   transition: transform 1.5s ease;
 }
@@ -104,11 +103,13 @@ card:focus-within {
   background-color: white;
   transform: scale(1.05);
 }
+
 /*MULES*/
 .alpaka {
   background-image: url("images/by_alexas_fotos.webp");
   background-position: center;
 }
+
 .pony {
   background-image: url("images/by_dan_cook.webp");
 }
@@ -116,13 +117,16 @@ card:focus-within {
 .donkey {
   background-image: url("images/by_daniel_fazio.webp");
 }
+
 .giraffe {
   background-image: url("images/by_james_wainscoat.webp");
   background-position: bottom;
 }
+
 .camel {
   background-image: url("images/by_mads_severinsen.webp");
 }
+
 .zebra {
   background-image: url("images/by_mark_basarab.webp");
   background-position: right;
@@ -132,10 +136,12 @@ card:focus-within {
   background-image: url("images/by_mikael _kristenson.webp");
   background-position: right;
 }
+
 .llama {
   background-image: url("images/by_pierre_borthiry.webp");
   background-position: center;
 }
+
 .goat {
   background-image: url("images/by_skylar_jean.webp");
 }
@@ -167,6 +173,19 @@ card:focus-within {
   .card:focus-within .card-content > *:not(.card-title) {
     opacity: 1;
     transition-delay: 1s;
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 /* 
