@@ -127,7 +127,7 @@ card:focus-within {
 
 .giraffe {
   background-image: url("images/by_james_wainscoat.webp");
-  background-position: bottom;
+  background-position: top;
 }
 
 .camel {
@@ -151,6 +151,7 @@ card:focus-within {
 
 .goat {
   background-image: url("images/by_skylar_jean.webp");
+  background-position: top;
 }
 
 /*Media Queries*/
