@@ -7,13 +7,43 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: normal;
+  color: white;
+  background: black;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.line {
+  background: rgba(0, 0, 0, 0.8);
+  height: 30px;
+  text-align: center;
+  color: black;
+}
+
 .container {
-  background-color: #000000e9;
-  width: 700px;
-  height: 680px;
-  border-radius: 25rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  height: 50vh;
+  height: auto;
+  border-radius: 2.5rem;
   margin: 2rem auto;
 }
+
+.palette-container {
+  background: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  border-radius: 2.5rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
 .palette {
   width: 30%;
   background: blue;
@@ -26,17 +56,6 @@ body {
   -moz-transition: background 0.6s;
 }
 
-h1 {
-  text-align: center;
-  line-height: 1.1;
-  font-weight: normal;
-  color: white;
-  background: steelblue;
-  margin: 0;
-  text-transform: uppercase;
-  padding: 20px 0;
-}
-
 #colorDisplay {
   font-size: 200%;
 }
@@ -44,13 +63,6 @@ h1 {
 #message {
   display: inline-block;
   width: 20%;
-}
-
-#line {
-  background: blue;
-  height: 30px;
-  text-align: center;
-  color: black;
 }
 
 .selected {
@@ -78,7 +90,10 @@ button:hover {
   background: steelblue;
 }
 .giphy {
+  size: 5px;
   width: 100%;
-  height: 100%;
+  max-width: 250px;
   position: relative;
+}
+#play {
 }

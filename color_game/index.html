@@ -23,62 +23,67 @@
   </head>
 
   <body>
-    <iframe
-      class="giphy"
-      src="https://giphy.com/embed/h6fH2PPR3OMb9S7UkS"
-      onmouseover="null"
-      onclick="null"
-      frameborder="0"
-    >
-    </iframe>
-
-    <h1>
-      The Ultimative
-      <br />
-      <span id="color-display">RGB</span>
-      <br />
-      Color Game
-    </h1>
-
-    <div id="line">
+    <div class="container">
       <iframe
         class="giphy"
-        display="inline-block"
+        src="https://giphy.com/embed/h6fH2PPR3OMb9S7UkS"
+        onmouseover="null"
+        onclick="null"
+        frameborder="0"
+      >
+      </iframe>
+
+      <h1>
+        The Ultimative
+        <br />
+        <span id="color-display">RGB</span>
+        <br />
+        Color Game
+      </h1>
+      <!-- <iframe
+        id="play"
+        class="giphy"
         src="https://giphy.com/embed/t8t0zq7QluoySeBC4w"
         onmouseover="null"
         onclick="null"
         frameborder="0"
+      > -->
+        
+        <div class="line">
+          <button id="reset">Need some new Colors</button>
+          <span id="message"></span>
+          <button class="level">Easy</button>
+          <button class="level selected">Hard</button>
+        </div>
+      </iframe>
+
+      <iframe
+        class="giphy"
+        src="https://giphy.com/embed/Jlpwr81aoMMlbXQr5T"
+        onmouseover="null"
+        onclick="null"
+        frameborder="0"
       ></iframe>
-      <button id="reset">Need some new Colors</button>
-      <span id="message"></span>
-      <button class="level">Easy</button>
-      <button class="level selected">Hard</button>
+      
+      <div class="palette-container"> 
+        <div class="palette"></div>
+        <div class="palette"></div>
+        <div class="palette"></div>
+        <div class="palette"></div>
+        <div class="palette"></div>
+        <div class="palette"></div>
+    </div>
+     
+
+      <iframe
+        class="giphy"
+        src="https://giphy.com/embed/Y0nFHI72JPGxxThu2k"
+        onmouseover="null"
+        onclick="null"
+        frameborder="0"
+      ></iframe>
     </div>
 
-    <iframe
-      class="giphy"
-      src="https://giphy.com/embed/Jlpwr81aoMMlbXQr5T"
-      onmouseover="null"
-      onclick="null"
-      frameborder="0"
-    ></iframe>
-
-    <div id="container">
-      <div class="palette"></div>
-      <div class="palette"></div>
-      <div class="palette"></div>
-      <div class="palette"></div>
-      <div class="palette"></div>
-      <div class="palette"></div>
-    </div>
-
-    <iframe
-      class="giphy"
-      src="https://giphy.com/embed/Y0nFHI72JPGxxThu2k"
-      onmouseover="null"
-      onclick="null"
-      frameborder="0"
-    ></iframe>
     <script src="events.js"></script>
   </body>
 </html>
