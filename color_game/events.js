@@ -58,7 +58,7 @@ function reset() {
   colorDisplay.textContent = pickedColor;
   resetButton.textContent = "New Colors";
   messageDisplay.textContent = "";
-  winnerDisplay.textContent = "";
+  //   winnerDisplay.textContent = "";
 
   //change colors of palettes
   for (let i = 0; i < palettes.length; i++) {
