@@ -4,7 +4,17 @@ body {
   background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  height: 1400px;
+  border-radius: 1.5rem;
+  margin: 2rem;
 }
 
 h1 {
@@ -12,33 +22,29 @@ h1 {
   font-size: 2rem;
   line-height: 1.1;
   font-weight: normal;
-  color: white;
+  color: steelblue;
   background: black;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
   margin: 0;
+  padding: 2rem;
   text-transform: uppercase;
-  padding: 20px 0;
 }
 
 .line {
-  background: rgba(0, 0, 0, 0.8);
-  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  height: auto;
+  padding-top: 1rem;
+  font-size: 1rem;
+  justify-content: space-between;
   text-align: center;
   color: black;
 }
 
-.container {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 90%;
-  max-width: 600px;
-  height: 50vh;
-  height: auto;
-  border-radius: 2.5rem;
-  margin: 2rem auto;
-}
-
 .palette-container {
-  background: rgba(0, 0, 0, 0.7);
+  background: black;
   width: 80%;
+  height: 23rem;
   border-radius: 2.5rem;
   margin: 2rem;
   padding: 2rem;
@@ -46,7 +52,7 @@ h1 {
 
 .palette {
   width: 30%;
-  background: blue;
+  background: black;
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
@@ -56,18 +62,27 @@ h1 {
   -moz-transition: background 0.6s;
 }
 
-#colorDisplay {
-  font-size: 200%;
+.palette:hover {
+  cursor: pointer;
+}
+
+#color-display {
+  color: white;
+  font-size: 4rem;
 }
 
 #message {
+  position: absolute;
+  transform: translate(-3.5rem, -2rem);
+  color: white;
   display: inline-block;
-  width: 20%;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 .selected {
-  color: white;
-  background: steelblue;
+  color: steelblue;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 button {
@@ -88,12 +103,12 @@ button {
 button:hover {
   color: white;
   background: steelblue;
+  transform: scale(1.1);
+  cursor: url(rubik.png), auto;
 }
+
 .giphy {
-  size: 5px;
   width: 100%;
-  max-width: 250px;
   position: relative;
-}
-#play {
+  align-self: center;
 }
