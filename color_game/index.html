@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Guess what color</title>
   </head>
+
   <body>
     <iframe
       class="giphy"
@@ -39,13 +40,20 @@
       Color Game
     </h1>
 
-    <iframe
-      class="giphy"
-      src="https://giphy.com/embed/t8t0zq7QluoySeBC4w"
-      onmouseover="null"
-      onclick="null"
-      frameborder="0"
-    ></iframe>
+    <div id="line">
+      <iframe
+        class="giphy"
+        display="inline-block"
+        src="https://giphy.com/embed/t8t0zq7QluoySeBC4w"
+        onmouseover="null"
+        onclick="null"
+        frameborder="0"
+      ></iframe>
+      <button id="reset">Need some new Colors</button>
+      <span id="message"></span>
+      <button class="level">Easy</button>
+      <button class="level selected">Hard</button>
+    </div>
 
     <iframe
       class="giphy"
@@ -54,21 +62,6 @@
       onclick="null"
       frameborder="0"
     ></iframe>
-
-    <iframe
-      class="giphy"
-      src="https://giphy.com/embed/Y0nFHI72JPGxxThu2k"
-      onmouseover="null"
-      onclick="null"
-      frameborder="0"
-    ></iframe>
-
-    <div id="line">
-      <button id="reset">Need some new Colors</button>
-      <span id="message"></span>
-      <button class="level">Easy</button>
-      <button class="level selected">Hard</button>
-    </div>
 
     <div id="container">
       <div class="palette"></div>
@@ -79,6 +72,13 @@
       <div class="palette"></div>
     </div>
 
+    <iframe
+      class="giphy"
+      src="https://giphy.com/embed/Y0nFHI72JPGxxThu2k"
+      onmouseover="null"
+      onclick="null"
+      frameborder="0"
+    ></iframe>
     <script src="events.js"></script>
   </body>
 </html>
