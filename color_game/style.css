@@ -16,7 +16,7 @@ footer {
 .container {
   background-color: rgba(0, 0, 0, 0.5);
   width: 90%;
-  height: 730px;
+  height: 660px;
   border-radius: 1.5rem;
   margin: 2rem 2rem 0 2rem;
 }
@@ -48,7 +48,7 @@ h1 {
 .palette-container {
   background: black;
   width: 80%;
-  height: 12rem;
+  height: 8rem;
   border-radius: 2.5rem;
   margin: 2rem;
   padding: 2rem;
@@ -108,16 +108,19 @@ button:hover {
   color: white;
   background: steelblue;
   transform: scale(1.1);
-  cursor: url(rubik.png), auto;
+  cursor: url(images/rubik.png), auto;
 }
 
-.giphy {
-  width: 100%;
+.giphy img {
+  width: 50%;
   position: relative;
   align-self: center;
 }
 
 #winner {
-  frameborder: 0;
   display: inline;
+  justify-content: center;
 }
+
+/* es müssen noch die js-befehle eingbaut werden für winner
+ebenfalls müssen noch die media-queries gesetzt  */
