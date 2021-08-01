@@ -98,7 +98,7 @@ p {
 
 .grid--1x2 {
   display: grid;
-  grid-column-gap: 1rem;
+  grid-column-gap: 3rem;
   margin-top: 3rem;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -129,4 +129,17 @@ p {
     column-gap: 12rem;
     width: 90%;
     height: 50%;
+}
+
+@media (min-width: 920px) {
+  .grid {
+    justify-content: initial;
+  }
+
+  .grid--1x2 {
+    display: grid;
+    margin-left: 8rem;
+    column-gap: 15rem;
+    width: 80%;
+    height: 30%;
 }
