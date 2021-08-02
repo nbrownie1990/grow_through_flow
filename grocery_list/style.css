@@ -9,7 +9,7 @@ body {
 
 .container {
   background-color: rgba(252, 249, 249, 0.65);
-  width: 80%;
+  width: auto;
   border-radius: 1.25rem;
   padding: 2rem;
   margin: 2rem;
@@ -22,8 +22,16 @@ input {
   border-style: none;
 }
 
+h1 {
+  text-align: center;
+}
+.userinput {
+  text-align: center;
+  padding: 0.25rem;
+}
+
 form {
-  justify-content: space-between;
+  text-align: center;
 }
 
 button {
