@@ -122,5 +122,27 @@ button:hover {
   justify-content: center;
 }
 
-/* es müssen noch die js-befehle eingbaut werden für winner
-ebenfalls müssen noch die media-queries gesetzt  */
+@media (min-width: 320px) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem 0.5rem;
+  }
+  img {
+    margin-top: -2rem;
+    transform: translate(0rem, 0.5rem);
+  }
+  button{
+    margin-bottom: 2rem;
+  }
+  .palette-container {
+    margin: 2rem;
+  }
+  #message {
+    padding: 2rem 0 0 1.3rem;
+    font-size: 1.5rem;
+  }
+  #color-display {
+    color: white;
+    font-size: 2rem;
+}
+/* es müssen noch die js-befehle eingbaut werden für winner */
