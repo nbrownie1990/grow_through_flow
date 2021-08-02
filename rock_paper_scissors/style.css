@@ -1,0 +1,13 @@
+body {
+  background-image: url(images/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: max-content;
+  height: auto;
+  font-size: 64.5%;
+  font-family: "Palette Mosaic", cursive;
+}
+
+h1 {
+  font-size: 2rem;
+}
