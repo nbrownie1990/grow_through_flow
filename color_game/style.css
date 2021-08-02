@@ -70,20 +70,6 @@ h1 {
   cursor: pointer;
 }
 
-#color-display {
-  color: white;
-  font-size: 4rem;
-}
-
-#message {
-  position: absolute;
-  transform: translate(-3.5rem, -2rem);
-  color: white;
-  display: inline-block;
-  font-size: 2.5rem;
-  padding-bottom: 1rem;
-}
-
 .selected {
   color: steelblue;
   background: rgba(0, 0, 0, 0.8);
@@ -110,6 +96,11 @@ button:hover {
   transform: scale(1.1);
   cursor: url(images/rubik.png), auto;
 }
+.grid--1x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  justify-content: center; 
+}
 
 .giphy img {
   width: 50%;
@@ -117,9 +108,20 @@ button:hover {
   align-self: center;
 }
 
-#winner {
-  display: inline;
-  justify-content: center;
+#color-display {
+  color: white;
+  font-size: 4rem;
+}
+
+#message {
+  position: absolute;
+  transform: translate(-3.5rem, -2rem);
+  color: white;
+  display: inline-block;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+#win {
 }
 
 @media (min-width: 320px) {
@@ -127,15 +129,37 @@ button:hover {
     font-size: 1.5rem;
     padding: 1.5rem 2rem 0.5rem;
   }
-  img {
-    margin-top: -2rem;
-    transform: translate(0rem, 0.5rem);
-  }
+ 
   button{
     margin-bottom: 2rem;
   }
+  .container{
+    width: 85%;
+    height: 425px;
+  }
+  .line{
+    padding-bottom: 2rem;
+  }
+  .cards {
+    margin-top: -2rem;
+    transform: translate(0rem, 0.5rem);
+  }
+
+  .brain {
+    margin-top: -2rem;
+    transform: translate(4rem, 0.5rem);
+    max-width: 100px;
+  }
+
+  .winner {
+    margin-top: -2rem;
+    transform: translate(-2rem, -0.35rem);
+    max-width: 90px;
+  }
+
   .palette-container {
-    margin: 2rem;
+    margin: 1rem;
+    padding: 0.3rem;
   }
   #message {
     padding: 2rem 0 0 1.3rem;
