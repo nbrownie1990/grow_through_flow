@@ -1,12 +1,15 @@
-const userChoiceDisplay = document.createElement("h1");
-const computerChoiceDisplay = document.createElement("h1");
-const resultDisplay = document.createElement("h1");
+const userChoiceDisplay = document.querySelector("#user-choice-display");
+const computerChoiceDisplay = document.querySelector(
+  "#computer-choice-display"
+);
+const resultDisplay = document.querySelector("#result-display");
 const gameGrid = document.querySelector("#game");
-const reset = document.querySelector("#reset");
-const userScore = document.querySelector("#user-score");
-const userScoreDisplay = document.querySelector("XXXX");
-const computerScore = document.querySelector("#computer-score");
-const computerScoreDisplay = document.querySelector("XXXX");
+const resetButton = document.querySelector("#reset");
+const userScore = document.querySelector("XXXX");
+const userScoreDisplay = document.querySelector("#user-score-display");
+const computerScore = document.querySelector("XXXXXX");
+const computerScoreDisplay = document.querySelector("#computer-score-display");
+const winningScoreSelect = document.querySelector("#playto");
 gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay);
 
 const choices = ["rock", "paper", "scissors"];
@@ -22,6 +25,8 @@ let isGameOver = false;
 //     userScore += 1;
 //     if(userScore === winningScore)
 //     isGameOver = true
+//userScoreDisplay.classList.add("winner");
+//computerScoreDisplay.classList.add("loser");
 // }
 // userScoreDisplay.textContent = userScore;
 // }
@@ -30,9 +35,28 @@ let isGameOver = false;
 //     computerScore += 1;
 //     if(computerScore === winningScore)
 //     isGameOver = true
+//computerScoreDisplay.classList.add("winner");
+//userScoreDisplay.classList.add("loser");
 // }
 // computerScoreDisplay.textContent = computerScore;
 // }
+
+winningScoreSelect.addEventListener("change", function () {
+  winningScore = parseInt(this.value);
+  reset();
+});
+
+resetButton.addEventListener("click", reset);
+
+function reset() {
+  isGameOver = false;
+  userScore = 0;
+  userScoreDisplay.textContent = 0;
+  computerScore = 0;
+  computerScoreDisplay.textContent = 0;
+  userScoreDisplay.classList.remove("winner", "loser");
+  computerScoreDisplay.classList.remove("winner", "loser");
+}
 
 const handleClick = (e) => {
   userChoice = e.target.id;
