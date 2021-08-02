@@ -4,7 +4,7 @@ let pickedColor;
 let palettes = document.querySelectorAll(".palette");
 let colorDisplay = document.getElementById("color-display");
 let messageDisplay = document.querySelector("#message");
-let winnerDisplay = document.querySelector("#winner");
+let win = document.querySelector("#win");
 let paletteContainer = document.querySelector(".palette-container");
 let h1 = document.querySelector("h1");
 let resetButton = document.querySelector("#reset");
@@ -44,6 +44,7 @@ function setupPalettes() {
         //turns all other palettes to the right answer color
         changeColors(clickedColor);
         h1.style.background = clickedColor;
+        win.style.display = "grid";
         resetButton.textContent = "Play Again?";
       } else {
         this.style.background = "black";
@@ -61,6 +62,7 @@ function reset() {
   colorDisplay.textContent = pickedColor;
   resetButton.textContent = "New Colors";
   messageDisplay.textContent = "";
+  win.style.display = "none";
   //   winnerDisplay.textContent = "";
 
   //change colors of palettes
