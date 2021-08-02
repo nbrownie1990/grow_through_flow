@@ -5,6 +5,7 @@ let palettes = document.querySelectorAll(".palette");
 let colorDisplay = document.getElementById("color-display");
 let messageDisplay = document.querySelector("#message");
 let winnerDisplay = document.querySelector("#winner");
+let paletteContainer = document.querySelector(".palette-container");
 let h1 = document.querySelector("h1");
 let resetButton = document.querySelector("#reset");
 let levelButtons = document.querySelectorAll(".level");
@@ -23,12 +24,14 @@ function setupLevelButtons() {
       levelButtons[0].classList.remove("selected");
       levelButtons[1].classList.remove("selected");
       this.classList.add("selected");
-      this.textContent === "Easy" ? (numPalettes = 3) : (numPalettes = 6);
+      this.textContent === "Easy"
+        ? ((numPalettes = 3), (paletteContainer.style.height = "4rem"))
+        : ((numPalettes = 6), (paletteContainer.style.height = "8rem"));
       reset();
     });
   }
 }
-//  looping through squares to apply color from colors array
+//  looping through palettes to apply color from colors array
 function setupPalettes() {
   for (let i = 0; i < palettes.length; i++) {
     //add click events to palettes
@@ -38,7 +41,7 @@ function setupPalettes() {
       //compare color to pickedColor & see if it matches
       if (clickedColor === pickedColor) {
         messageDisplay.textContent = "Correct!";
-        //turns all other squares to the right answer color
+        //turns all other palettes to the right answer color
         changeColors(clickedColor);
         h1.style.background = clickedColor;
         resetButton.textContent = "Play Again?";
