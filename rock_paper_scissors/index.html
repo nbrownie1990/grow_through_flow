@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Oswald&family=Palette+Mosaic&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/5b1b56b247.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -24,81 +28,113 @@
     <title>RockPaperScissors</title>
   </head>
   <body>
-
     <header>
       <h1 class="page-title">ROCK | PAPER | SCISSORS</h1>
     </header>
 
     <div class="container">
-    <div class="columns is-mobile">
-      <div class="column">
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="images/preview.gif" alt="Image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>User</strong>
-                  <br>
-                  Lorem ipsum dolor sit amet.
-                  <br>
-                  <span id="user-choice-display"> I choosee...</span>
-                </p>
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="images/rps.gif" alt="Image" />
+                </figure>
               </div>
-            </div>
-          </article>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Username</strong>
+                    <br />
+
+                    <span id="user-choice-display"> I choosee...</span>
+                    <br />
+                    <br />
+
+                    <button
+                      id="rock"
+                      class="button is-info is-rounded is-focused"
+                    >
+                      <span class="icon is-small">
+                        <i class="fas fa-hand-rock"></i
+                      ></span>
+                    </button>
+                    <button
+                      id="scissors"
+                      class="button is-warning is-rounded is-focused"
+                    >
+                      <span class="icon is-small">
+                        <i class="fas fa-hand-scissors"></i
+                      ></span>
+                    </button>
+                    <button
+                      id="paper"
+                      class="button is-danger is-rounded is-focused"
+                    >
+                      <span class="icon is-small">
+                        <i class="fas fa-hand-paper"></i>
+                      </span>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Computer</strong>
+                    <br />
+                    Let's get started.
+                    <br />
+                    <br />
+
+                    <span id="computer-choice-display"> I choosee...</span>
+                  </p>
+                </div>
+              </div>
+              <div class="media-right">
+                <figure class="image is-64x64">
+                  <img src="images/preview.gif" alt="Image" />
+                </figure>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
-      <div class="column"><div class="box">
-        <article class="media">
-          
-          <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>User</strong>
-                <br>
-                Lorem ipsum dolor sit amet.
-                <br>
-                <span id="computer-choice-display"> I choosee...</span>
-              </p>
-            </div>
-          </div>
-            <div class="media-right">
-              <figure class="image is-64x64">
-                <img src="images/preview.gif" alt="Image">
-              </figure>
-            
-          </div>
-        </article></div>
-    </div>
-</div>
-        
-    <div class="container">
 
-      <div class="columns is-mobile">
-        <div class="column is-half is-offset-one-quarter">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">Score-Tracker</p>
-            </header>
-            <div class="card-content">
-              <div id="score-keeper" class="content">
-                    <h1 class="title is-1">
-                      <span id="user-score-display">0</span> to
-                      <span id="computer-score-display">0</span>
-                    </h1>
-                    <h2 >
-                      <span id="result-display">Hm?</span> 
-                    </h2>
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Score-Tracker</p>
+              </header>
+              <div class="card-content">
+                <div id="score-keeper" class="content">
+                  <h1 class="title is-1">
+                    <span id="user-score-display">0</span> to
+                    <span id="computer-score-display">0</span>
+                  </h1>
+                  <h2>
+                    <span id="result-display">Hm?</span>
+                    <span id="game">hö</span>
+                  </h2>
                 </div>
               </div>
             </div>
-            <footer class="card-footer">
-              <h3 class="card-footer-item">Play to:</h3>
+            <footer class="card-footer is-align-items-center">
+              <label
+                for="playto"
+                class="label is-large is-inline card-footer-item"
+                >Play to:</label
+              >
+              <div class="select is-rounded">
                 <select id="playto">
                   <option value="3">3</option>
                   <option value="4">4</option>
@@ -109,10 +145,11 @@
                   <option value="9">9</option>
                   <option value="10">10</option>
                   <option value="11">11</option>
-                </select></h3
-              >
-              <h3 class="card-footer-item">        <button id="reset">Reset</button>
-              </h3>
+                </select>
+              </div>
+              <div class="card-footer-item">
+                <button id="reset" class="button is-rounded">Reset</button>
+              </div>
             </footer>
           </div>
         </div>
