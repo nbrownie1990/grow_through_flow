@@ -34,7 +34,7 @@ form {
   text-align: center;
 }
 
-button {
+.btn {
   background-color: rgb(29, 92, 29);
   color: white;
   font-family: "Slabo 13px", serif;
@@ -46,10 +46,22 @@ button {
   transition: background-color 200ms ease-in-out;
 }
 
-button:hover {
+.btn:hover {
   background-color: white;
   color: rgb(29, 92, 29);
 }
+
+.delete-btn {
+  background-color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.fas {
+  pointer-events: none;
+}
+
 .listArea {
   background-color: white;
   border-radius: 0.5rem;
