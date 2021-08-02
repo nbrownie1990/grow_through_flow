@@ -4,6 +4,7 @@ body {
   background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
   align-items: center;
   justify-self: center;
   justify-content: center;
@@ -15,8 +16,8 @@ footer {
 
 .container {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 90%;
-  height: 660px;
+  width: auto;
+  height: max-content;
   border-radius: 1.5rem;
   margin: 2rem 2rem 0 2rem;
 }
