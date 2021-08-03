@@ -85,7 +85,7 @@ function win(userChoice, computerChoice) {
       isGameOver = true;
       userScoreDisplay.classList.add("winner");
       computerScoreDisplay.classList.add("loser");
-      resultDisplay.innerHTML = "you WIN";
+      resultDisplay.innerHTML = `you WIN `;
       resultDisplay.classList.add("winner");
       rock.disabled = true;
       paper.disabled = true;
@@ -161,3 +161,5 @@ input.addEventListener("input", (e) => {
 //   input.submit();
 //   formInput.appendChild(newUsername);
 //   input.style.visibility = "hidden";
+
+///GIF Iwo cool einbauen siehe HTML auskommentiert

@@ -108,7 +108,7 @@
               </div>
               <div class="media-right">
                 <figure class="image is-64x64">
-                  <img src="images/preview.gif" alt="Image" />
+                  <img src="images/rps.gif" alt="Image" id="mirror"/>
                 </figure>
               </div>
             </article>
@@ -124,9 +124,17 @@
                 <h1 class="title is-1">
                   <i class="fas fa-user-ninja"></i><span id="user-score-display">0</span> to
                   <span id="computer-score-display">0</span><i class="fas fa-robot"></i>  
-
-                </h1>
-                <h2>
+              </h1>
+              <!-- <div class="card">
+                <div class="card-content is-overlay">
+                  <span class="tag">
+                  <figure class="image is-128x128">
+                    <img src="images/preview.gif" alt="rock-paper-scissors-preview">
+                  </figure>
+                   </span>
+                </div>
+              </div> -->
+              <h2>
                   Fight:
                   <br />
                   <br />
@@ -140,6 +148,7 @@
             </div>
           </div>
           <footer class="card-footer is-align-items-center">
+
             <label
               for="playto"
               class="label is-large is-inline card-footer-item"
@@ -159,12 +168,16 @@
               </select>
             </div>
             <div class="card-footer-item">
+
               <button id="reset" class="button is-rounded">Reset</button>
             </div>
           </footer>
         </div>
       </div>
     </div>
+
+    
+
 
     <script src="events.js" type="text/javascript"></script>
   </body>
