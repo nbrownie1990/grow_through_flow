@@ -80,6 +80,9 @@ function win(userChoice, computerChoice) {
       computerScoreDisplay.classList.add("loser");
       resultDisplay.innerHTML = "you WIN";
       resultDisplay.classList.add("winner");
+      rock.disabled = true;
+      paper.disabled = true;
+      scissors.disabled = true;
     }
     userScoreDisplay.textContent = userScore;
   }
@@ -96,6 +99,9 @@ function lose(userChoice, computerChoice) {
       userScoreDisplay.classList.add("loser");
       resultDisplay.innerHTML = "Arghh... you LOSE";
       resultDisplay.classList.add("loser");
+      rock.disabled = true;
+      paper.disabled = true;
+      scissors.disabled = true;
     }
     computerScoreDisplay.textContent = computerScore;
   }
@@ -123,6 +129,9 @@ function reset() {
   computerScoreDisplay.classList.remove("winner", "loser");
   resultDisplay.classList.remove("winner", "loser");
   resultDisplay.innerHTML = "";
+  rock.disabled = false;
+  paper.disabled = false;
+  scissors.disabled = false;
 }
 
 //NicetoHave == badge mit eigenem Namen
