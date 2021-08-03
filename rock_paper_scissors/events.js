@@ -71,8 +71,10 @@ const generateComputerChoice = function () {
 };
 
 function win(userChoice, computerChoice) {
-  resultDisplay.innerHTML = "YOU WIN!";
-  gameGrid.innerHTML = `${userChoice} beats ${computerChoice}`;
+  resultDisplay.innerHTML = "you WIN";
+  resultDisplay.classList.remove("draw", "loser");
+  resultDisplay.classList.add("winner");
+  gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __beats__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
 
   if (!isGameOver) {
     userScore += 1;
@@ -86,8 +88,10 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
-  resultDisplay.innerHTML = "Arghh..YOU LOSE!";
-  gameGrid.innerHTML = `${computerChoice} beats ${userChoice}`;
+  resultDisplay.innerHTML = "Arghh... you LOSE";
+  resultDisplay.classList.remove("winner", "draw");
+  resultDisplay.classList.add("loser");
+  gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __fails to__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
 
   //Score-Tracker:
   if (!isGameOver) {
@@ -101,36 +105,41 @@ function lose(userChoice, computerChoice) {
 
 function draw(userChoice, computerChoice) {
   resultDisplay.innerHTML = "IT's A DRAW";
-  gameGrid.innerHTML = `${computerChoice} vs. ${userChoice} ? ...samesame`;
+  resultDisplay.classList.remove("winner", "loser");
+  resultDisplay.classList.add("draw");
+
+  gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __samesame__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
 }
 
 //WINNING SCORE
-// winningScoreSelect.addEventListener("change", function () {
-//   winningScore = parseInt(this.value);
-//   reset();
-// });
+winningScoreSelect.addEventListener("change", function () {
+  winningScore = parseInt(this.value);
+  reset();
+});
 
 //RESET
 resetButton.addEventListener("click", reset);
-
 function reset() {
   isGameOver = false;
   userScore = 0;
   userScoreDisplay.textContent = 0;
   computerScore = 0;
   computerScoreDisplay.textContent = 0;
-  userScoreDisplay.classList.toggle("winner", "loser");
-  computerScoreDisplay.classList.toggle("winner", "loser");
+  userScoreDisplay.classList.remove("winner", "loser");
+  userScoreDisplay.classList.add("draw");
+  userScoreDisplay.classList.remove("winner", "loser");
+  computerScoreDisplay.classList.add("draw");
 }
 
 //NicetoHave == badge mit eigenem Namen
-// const h1 = document.querySelector("h1")
-// let input = document.querySelector("#username")
+const h2 = document.querySelectorAll("h2")[0];
+const usernameInput = document.querySelector("#username-input");
+let input = document.querySelector("#username");
 
-// input.addEventListener("input", (e) =>{
-//     if (input.value === ""){
-//         p.innerText = "Enter Your Username";
-//     } else{
-//     p.innerText = `${input.value}`;
-//     }
-// });
+input.addEventListener("input", (e) => {
+  if (input.value === "") {
+    h2.innerText = "Enter Your Username";
+  } else {
+    h2.innerText = `${input.value}`;
+  }
+});
