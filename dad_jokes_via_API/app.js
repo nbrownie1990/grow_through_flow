@@ -1,31 +1,27 @@
-const joke = document.querySelector("#joke");
-const getNewJoke = document.querySelector("#joke-btn");
-
-getNewJoke.addEventListener("click", dadTellsJoke);
-
-dadTellsJoke();
+const jokes = document.querySelector("#joke");
+const newJoke = document.querySelector("#joke-btn");
 
 ////////////////////////
 //Using AXIOS
 ////////////////////////
-// Make a request for a user with a given ID
-axios.get("https://icanhazdadjoke.com")
-  .then((res) => {
-    console.log(res.data.attachments.text);
-  })
-  .catch((error) => {
-    console.log("Error", error);
-  })
-  const fetchDadJoke= async () => {
-      try{
-          const res = await axios.get("https://icanhazdadjoke.com")
-          console.log(res.data.attachments.text);
-        }catch(e) => {
-            console.log("Error", e);
-          }
+
+const getNewJoke = async () => {
+  const jokeText = await dadTellsJoke();
+  jokes.innerHTML = `${jokeText}`;
+};
+
+const dadTellsJoke = async () => {
+  try {
+    const config = { headers: { Accept: "application/json" } };
+    const res = await axios.get("https://icanhazdadjoke.com", config);
+    return res.data.joke;
+  } catch (e) {
+    return "no jokes available :( Sorry!";
   }
-  
-  
+};
+
+newJoke.addEventListener("click", getNewJoke);
+
 ////////////////////////
 //Using FETCH --> with ASYNC & AWAIT
 ////////////////////////
