@@ -32,9 +32,9 @@
       <h1 class="page-title">ROCK | PAPER | SCISSORS</h1>
     </header>
 
-    <div class="container">
-      <div class="columns is-mobile">
-        <div class="column">
+    <div class="container is-fluid">
+      <div class="columns is-mobile is-fluid is-multiline">
+        <div class="column is-fluid">
           <div class="box">
             <article class="media">
               <div class="media-left">
@@ -46,10 +46,6 @@
                 <div class="content">
                   <p>
                     <strong>Username</strong>
-                    <br />
-
-                    <span id="user-choice-display"> I choosee...</span>
-                    <br />
                     <br />
 
                     <button
@@ -76,13 +72,17 @@
                         <i class="fas fa-hand-paper"></i>
                       </span>
                     </button>
+                    <br />
+                    <br />
+                    I choosee...
+                    <span id="user-choice-display"> </span>
                   </p>
                 </div>
               </div>
             </article>
           </div>
         </div>
-        <div class="column">
+        <div class="column is-fluid is-multiline">
           <div class="box">
             <article class="media">
               <div class="media-content">
@@ -90,11 +90,8 @@
                   <p>
                     <strong>Computer</strong>
                     <br />
-                    Let's get started.
-                    <br />
-                    <br />
-
-                    <span id="computer-choice-display"> I choosee...</span>
+                    Let's get started. I choo...
+                    <span id="computer-choice-display"> </span>
                   </p>
                 </div>
               </div>
@@ -108,50 +105,53 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="columns is-mobile">
-          <div class="column is-half is-offset-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">Score-Tracker</p>
-              </header>
-              <div class="card-content">
-                <div id="score-keeper" class="content">
-                  <h1 class="title is-1">
-                    <span id="user-score-display">0</span> to
-                    <span id="computer-score-display">0</span>
-                  </h1>
-                  <h2>
-                    <span id="result-display">Hm?</span>
-                    <span id="game">hö</span>
-                  </h2>
-                </div>
+      <div class="columns is-centered is-multiline">
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">Score-Tracker</p>
+            </header>
+            <div class="card-content">
+              <div id="score-keeper" class="content">
+                <h1 class="title is-1">
+                  <span id="user-score-display">0</span> to
+                  <span id="computer-score-display">0</span>
+                </h1>
+                <h2>
+                  Choices:
+                  <br />
+                  <span id="game"></span>
+                  <br />
+                  <br />
+                  <span id="result-display">Result:</span>
+                  <br />
+                </h2>
               </div>
             </div>
-            <footer class="card-footer is-align-items-center">
-              <label
-                for="playto"
-                class="label is-large is-inline card-footer-item"
-                >Play to:</label
-              >
-              <div class="select is-rounded">
-                <select id="playto">
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                </select>
-              </div>
-              <div class="card-footer-item">
-                <button id="reset" class="button is-rounded">Reset</button>
-              </div>
-            </footer>
           </div>
+          <footer class="card-footer is-align-items-center">
+            <label
+              for="playto"
+              class="label is-large is-inline card-footer-item"
+              >Play to:</label
+            >
+            <div class="select is-rounded">
+              <select id="playto">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+              </select>
+            </div>
+            <div class="card-footer-item">
+              <button id="reset" class="button is-rounded">Reset</button>
+            </div>
+          </footer>
         </div>
       </div>
     </div>

@@ -1,10 +1,19 @@
-body {
-  background-image: url(images/background.jpeg);
-  font-size: 64.5%;
-  width: max-content;
-  height: auto;
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html {
+  background: url(images/background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  font-size: 64.5%;
+}
+
 img {
   background-color: salmon;
   border-radius: 2.5rem;
@@ -26,6 +35,9 @@ label,
   font-family: "Palette Mosaic", cursive;
 }
 
+span {
+  font-weight: bold;
+}
 #playto {
   margin-left: 0.5rem;
   font-family: "Oswald", sans-serif;

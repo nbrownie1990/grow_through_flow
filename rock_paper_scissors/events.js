@@ -1,52 +1,117 @@
+//USER CHOICES
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 const userChoiceDisplay = document.querySelector("#user-choice-display");
+//COMP CHOICES
 const computerChoiceDisplay = document.querySelector(
   "#computer-choice-display"
 );
+//RESULTS
 const resultDisplay = document.querySelector("#result-display");
 const gameGrid = document.querySelector("#game");
-// const resetButton = document.querySelector("#reset");
+gameGrid.append(
+  `User:${userChoiceDisplay} vs. Computer: ${computerChoiceDisplay}`
+);
+
 //SCORES
-// const userScore = document.querySelector("XXXX");
-// const userScoreDisplay = document.querySelector("#user-score-display");
-// const computerScore = document.querySelector("XXXXXX");
-// const computerScoreDisplay = document.querySelector("#computer-score-display");
-// const winningScoreSelect = document.querySelector("#playto");
-gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay);
+let userScore = 0;
+const userScoreDisplay = document.querySelector("#user-score-display");
+const computerScore = 0;
+const computerScoreDisplay = document.querySelector("#computer-score-display");
+let winningScore = 5;
+const winningScoreSelect = document.querySelector("#playto");
+const resetButton = document.querySelector("#reset");
+let isGameOver = false;
 
-const choices = ["rock", "paper", "scissors"];
-let userChoiceDisplay;
-let computerChoiceDisplay;
-// let userScore = 0;
-// let computerScore = 0;
-// let winningScore = 5;
-// let isGameOver = false;
+/////////////////////////////
+function game(userChoice) {
+  userChoiceDisplay.innerHTML = `${userChoice}`;
+  let computerChoice = generateComputerChoice();
+  computerChoiceDisplay.innerHtml = `${computerChoice}`;
 
-//Score-Tracker:
-// if(!isGameOver){
-//     userScore += 1;
-//     if(userScore === winningScore)
-//     isGameOver = true
-//userScoreDisplay.classList.add("winner");
-//computerScoreDisplay.classList.add("loser");
-// }
-// userScoreDisplay.textContent = userScore;
-// }
+  switch (userChoice + computerChoice) {
+    case "scissorspaper":
+    case "rockscissors":
+    case "paperrock":
+      win(userChoice, computerChoice);
+      break;
+    case "paperscissors":
+    case "scissorsrock":
+    case "rockpaper":
+      lose(userChoice, computerChoice);
+      break;
+    case "paperpaper":
+    case "scissorsscissors":
+    case "rockrock":
+      draw(userChoice, computerChoice);
+      break;
+  }
+}
 
-// if(!isGameOver){
-//     computerScore += 1;
-//     if(computerScore === winningScore)
-//     isGameOver = true
-//computerScoreDisplay.classList.add("winner");
-//userScoreDisplay.classList.add("loser");
-// }
-// computerScoreDisplay.textContent = computerScore;
-// }
+//MAIN / USERCHOICE
+function main() {
+  rock.addEventListener("click", function () {
+    game("rock");
+  });
 
+  paper.addEventListener("click", function () {
+    game("paper");
+  });
+
+  scissors.addEventListener("click", function () {
+    game("scissors");
+  });
+}
+main();
+
+//COMP CHOICE
+const generateComputerChoice = function () {
+  let choices = ["rock", "paper", "scissors"];
+  const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+  computerChoice = randomChoice;
+  return computerChoice;
+};
+
+function win(user, computer) {
+  //Score-Tracker:
+  // if(!isGameOver){
+  //     userScore += 1;
+  //     if(userScore === winningScore)
+  //     isGameOver = true
+  //userScoreDisplay.classList.add("winner");
+  //computerScoreDisplay.classList.add("loser");
+  // }
+  // userScoreDisplay.textContent = userScore;
+  // }
+  resultDisplay.innerHTML = "YOU WIN!";
+}
+
+function lose(user, computer) {
+  resultDisplay.innerHTML = "YOU LOSE!";
+  //Score-Tracker:
+  // if(!isGameOver){
+  //     computerScore += 1;
+  //     if(computerScore === winningScore)
+  //     isGameOver = true
+  //computerScoreDisplay.classList.add("winner");
+  //userScoreDisplay.classList.add("loser");
+  // }
+  // computerScoreDisplay.textContent = computerScore;
+  // }
+}
+
+function draw(user, computer) {
+  resultDisplay.innerHTML = "IT's A DRAW";
+}
+
+//WINNING SCORE
 // winningScoreSelect.addEventListener("change", function () {
 //   winningScore = parseInt(this.value);
 //   reset();
 // });
 
+//RESET
 // // resetButton.addEventListener("click", reset);
 
 // function reset() {
@@ -58,44 +123,6 @@ let computerChoiceDisplay;
 //   userScoreDisplay.classList.remove("winner", "loser");
 //   computerScoreDisplay.classList.remove("winner", "loser");
 // }
-
-const handleClick = function (e) {
-  userChoice = e.target.id;
-  userChoiceDisplay.innerHTML = `User Choice:  ${userChoice}`;
-  generateComputerChoice();
-  getResult();
-};
-
-const generateComputerChoice = function () {
-  const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-  computerChoice = randomChoice;
-  computerChoiceDisplay.innerHtml = `Computer choice:  ${computerChoice}`;
-};
-
-for (let i = 0; i < choices.length; i++) {
-  const button = document.createElement("button");
-  button.id = choices[i];
-  button.addEventListener("click", handleClick);
-  gameGrid.appendChild(button);
-}
-
-const getResult = function () {
-  switch (userChoice + computerChoice) {
-    case "scissorspaper":
-    case "rockscissors":
-    case "paperrock":
-      resultDisplay.innerHTML = "YOU WIN!";
-      break;
-    case "paperscissors":
-    case "scissorsrock":
-    case "rockpaper":
-      resultDisplay.innerHTML = "YOU LOSE!";
-    case "paperpaper":
-    case "scissorscissor":
-    case "rockrock":
-      resultDisplay.innerHTML = "IT's A DRAW";
-  }
-};
 
 //NicetoHave == badge mit eigenem Namen
 // const h1 = document.querySelector("h1")
