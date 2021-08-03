@@ -28,7 +28,6 @@ let isGameOver = false;
 function game(userChoice) {
   userChoiceDisplay.innerHTML = `${userChoice}`;
   let computerChoice = generateComputerChoice();
-  computerChoiceDisplay.innerHtml = `${computerChoice}`;
 
   switch (userChoice + computerChoice) {
     case "scissorspaper":
@@ -70,6 +69,7 @@ const generateComputerChoice = function () {
   let choices = ["rock", "paper", "scissors"];
   const randomChoice = choices[Math.floor(Math.random() * choices.length)];
   computerChoice = randomChoice;
+  computerChoiceDisplay.innerHTML = `${computerChoice}`;
   return computerChoice;
 };
 
