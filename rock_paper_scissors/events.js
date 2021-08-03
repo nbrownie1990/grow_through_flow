@@ -1,15 +1,11 @@
-//USER CHOICES
+// CHOICES
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 const userChoiceDisplay = document.querySelector("#user-choice-display");
-//COMP CHOICES
 const computerChoiceDisplay = document.querySelector(
   "#computer-choice-display"
 );
-//RESULTS
-const resultDisplay = document.querySelector("#result-display");
-const gameGrid = document.querySelector("#game");
 
 //SCORES
 let userScore = 0;
@@ -18,6 +14,10 @@ let computerScore = 0;
 const computerScoreDisplay = document.querySelector("#computer-score-display");
 let winningScore = 3;
 let winningScoreSelect = document.querySelector("#playto");
+
+//RESULTS
+const resultDisplay = document.querySelector("#result-display");
+const gameGrid = document.querySelector("#game");
 const resetButton = document.querySelector("#reset");
 let isGameOver = false;
 
@@ -70,6 +70,13 @@ const generateComputerChoice = function () {
   return computerChoice;
 };
 
+//WINNING SCORE
+winningScoreSelect.addEventListener("change", function () {
+  winningScore = parseInt(this.value);
+  reset();
+});
+
+//RESULTS
 function win(userChoice, computerChoice) {
   gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __beats__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
   if (!isGameOver) {
@@ -90,7 +97,6 @@ function win(userChoice, computerChoice) {
 
 function lose(userChoice, computerChoice) {
   gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __fails to__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
-  //Score-Tracker:
   if (!isGameOver) {
     computerScore += 1;
     if (computerScore == winningScore) {
@@ -111,12 +117,6 @@ function draw(userChoice, computerChoice) {
   gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __samesame__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
 }
 
-//WINNING SCORE
-winningScoreSelect.addEventListener("change", function () {
-  winningScore = parseInt(this.value);
-  reset();
-});
-
 resetButton.addEventListener("click", reset);
 
 function reset() {
@@ -134,6 +134,9 @@ function reset() {
   scissors.disabled = false;
 }
 
+//////////
+/////////
+/////////
 //NicetoHave == badge mit eigenem Namen
 const h2 = document.querySelectorAll("h2")[0];
 const formInput = document.querySelector("#form-input");
@@ -147,6 +150,10 @@ input.addEventListener("input", (e) => {
     h2.innerText = `${input.value}`;
   }
 });
+
+//TO-DOS
+//1.CREATE INPUT ELEMENT,THat disappears after submitting
+//2.REFACTOR THE CODE
 
 // document.onkeydown.addEventListener("submit", (e) => {
 //   e.preventDefault();
