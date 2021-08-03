@@ -46,7 +46,9 @@ span {
 #reset {
   background-color: salmon;
 }
-
+#game {
+  font-family: "Oswald", sans-serif;
+}
 .title {
   font-family: "Oswald", sans-serif;
 }

@@ -10,9 +10,6 @@ const computerChoiceDisplay = document.querySelector(
 //RESULTS
 const resultDisplay = document.querySelector("#result-display");
 const gameGrid = document.querySelector("#game");
-gameGrid.append(
-  `User:${userChoiceDisplay} vs. Computer: ${computerChoiceDisplay}`
-);
 
 //SCORES
 let userScore = 0;
@@ -73,36 +70,38 @@ const generateComputerChoice = function () {
   return computerChoice;
 };
 
-function win(user, computer) {
-  //Score-Tracker:
-  // if(!isGameOver){
-  //     userScore += 1;
-  //     if(userScore === winningScore)
-  //     isGameOver = true
-  //userScoreDisplay.classList.add("winner");
-  //computerScoreDisplay.classList.add("loser");
-  // }
-  // userScoreDisplay.textContent = userScore;
-  // }
+function win(userChoice, computerChoice) {
   resultDisplay.innerHTML = "YOU WIN!";
+  gameGrid.innerHTML = `${userChoice} beats ${computerChoice}`;
+
+  if (!isGameOver) {
+    userScore += 1;
+    if (userScore === winningScore) {
+      isGameOver = true;
+      userScoreDisplay.classList.add("winner");
+      computerScoreDisplay.classList.add("loser");
+    }
+    userScoreDisplay.textContent = userScore;
+  }
 }
 
-function lose(user, computer) {
-  resultDisplay.innerHTML = "YOU LOSE!";
+function lose(userChoice, computerChoice) {
+  resultDisplay.innerHTML = "Arghh..YOU LOSE!";
+  gameGrid.innerHTML = `${computerChoice} beats ${userChoice}`;
+
   //Score-Tracker:
-  // if(!isGameOver){
-  //     computerScore += 1;
-  //     if(computerScore === winningScore)
-  //     isGameOver = true
-  //computerScoreDisplay.classList.add("winner");
-  //userScoreDisplay.classList.add("loser");
-  // }
-  // computerScoreDisplay.textContent = computerScore;
-  // }
+  if (!isGameOver) {
+    computerScore += 1;
+    if (computerScore === winningScore) isGameOver = true;
+    computerScoreDisplay.classList.add("winner");
+    userScoreDisplay.classList.add("loser");
+  }
+  computerScoreDisplay.textContent = computerScore;
 }
 
-function draw(user, computer) {
+function draw(userChoice, computerChoice) {
   resultDisplay.innerHTML = "IT's A DRAW";
+  gameGrid.innerHTML = `${computerChoice} vs. ${userChoice} ? ...samesame`;
 }
 
 //WINNING SCORE
@@ -112,17 +111,17 @@ function draw(user, computer) {
 // });
 
 //RESET
-// // resetButton.addEventListener("click", reset);
+resetButton.addEventListener("click", reset);
 
-// function reset() {
-//   isGameOver = false;
-//   userScore = 0;
-//   userScoreDisplay.textContent = 0;
-//   computerScore = 0;
-//   computerScoreDisplay.textContent = 0;
-//   userScoreDisplay.classList.remove("winner", "loser");
-//   computerScoreDisplay.classList.remove("winner", "loser");
-// }
+function reset() {
+  isGameOver = false;
+  userScore = 0;
+  userScoreDisplay.textContent = 0;
+  computerScore = 0;
+  computerScoreDisplay.textContent = 0;
+  userScoreDisplay.classList.toggle("winner", "loser");
+  computerScoreDisplay.classList.toggle("winner", "loser");
+}
 
 //NicetoHave == badge mit eigenem Namen
 // const h1 = document.querySelector("h1")
