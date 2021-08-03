@@ -71,43 +71,37 @@ const generateComputerChoice = function () {
 };
 
 function win(userChoice, computerChoice) {
-  resultDisplay.innerHTML = "you WIN";
-  resultDisplay.classList.remove("draw", "loser");
-  resultDisplay.classList.add("winner");
   gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __beats__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
-
   if (!isGameOver) {
     userScore += 1;
     if (userScore == winningScore) {
       isGameOver = true;
       userScoreDisplay.classList.add("winner");
       computerScoreDisplay.classList.add("loser");
+      resultDisplay.innerHTML = "you WIN";
+      resultDisplay.classList.add("winner");
     }
     userScoreDisplay.textContent = userScore;
   }
 }
 
 function lose(userChoice, computerChoice) {
-  resultDisplay.innerHTML = "Arghh... you LOSE";
-  resultDisplay.classList.remove("winner", "draw");
-  resultDisplay.classList.add("loser");
   gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __fails to__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
-
   //Score-Tracker:
   if (!isGameOver) {
     computerScore += 1;
-    if (computerScore == winningScore) isGameOver = true;
-    computerScoreDisplay.classList.add("winner");
-    userScoreDisplay.classList.add("loser");
+    if (computerScore == winningScore) {
+      isGameOver = true;
+      computerScoreDisplay.classList.add("winner");
+      userScoreDisplay.classList.add("loser");
+      resultDisplay.innerHTML = "Arghh... you LOSE";
+      resultDisplay.classList.add("loser");
+    }
+    computerScoreDisplay.textContent = computerScore;
   }
-  computerScoreDisplay.textContent = computerScore;
 }
 
 function draw(userChoice, computerChoice) {
-  resultDisplay.innerHTML = "IT's A DRAW";
-  resultDisplay.classList.remove("winner", "loser");
-  resultDisplay.classList.add("draw");
-
   gameGrid.innerHTML = `<i class="fas fa-user-ninja"></i>: ${userChoice} __samesame__ ${computerChoice} : <i class="fas fa-robot"></i>  `;
 }
 
@@ -126,9 +120,9 @@ function reset() {
   computerScore = 0;
   computerScoreDisplay.textContent = 0;
   userScoreDisplay.classList.remove("winner", "loser");
-  userScoreDisplay.classList.add("draw");
-  userScoreDisplay.classList.remove("winner", "loser");
-  computerScoreDisplay.classList.add("draw");
+  computerScoreDisplay.classList.remove("winner", "loser");
+  resultDisplay.classList.remove("winner", "loser");
+  resultDisplay.innerHTML = "";
 }
 
 //NicetoHave == badge mit eigenem Namen
@@ -151,4 +145,3 @@ input.addEventListener("input", (e) => {
 //   input.submit();
 //   formInput.appendChild(newUsername);
 //   input.style.visibility = "hidden";
-// });
