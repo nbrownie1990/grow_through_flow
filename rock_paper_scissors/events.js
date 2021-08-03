@@ -14,10 +14,10 @@ const gameGrid = document.querySelector("#game");
 //SCORES
 let userScore = 0;
 const userScoreDisplay = document.querySelector("#user-score-display");
-const computerScore = 0;
+let computerScore = 0;
 const computerScoreDisplay = document.querySelector("#computer-score-display");
-let winningScore = 5;
-const winningScoreSelect = document.querySelector("#playto");
+let winningScore = 3;
+let winningScoreSelect = document.querySelector("#playto");
 const resetButton = document.querySelector("#reset");
 let isGameOver = false;
 
@@ -78,7 +78,7 @@ function win(userChoice, computerChoice) {
 
   if (!isGameOver) {
     userScore += 1;
-    if (userScore === winningScore) {
+    if (userScore == winningScore) {
       isGameOver = true;
       userScoreDisplay.classList.add("winner");
       computerScoreDisplay.classList.add("loser");
@@ -96,7 +96,7 @@ function lose(userChoice, computerChoice) {
   //Score-Tracker:
   if (!isGameOver) {
     computerScore += 1;
-    if (computerScore === winningScore) isGameOver = true;
+    if (computerScore == winningScore) isGameOver = true;
     computerScoreDisplay.classList.add("winner");
     userScoreDisplay.classList.add("loser");
   }
@@ -117,8 +117,8 @@ winningScoreSelect.addEventListener("change", function () {
   reset();
 });
 
-//RESET
 resetButton.addEventListener("click", reset);
+
 function reset() {
   isGameOver = false;
   userScore = 0;
