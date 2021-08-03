@@ -133,13 +133,22 @@ function reset() {
 
 //NicetoHave == badge mit eigenem Namen
 const h2 = document.querySelectorAll("h2")[0];
+const formInput = document.querySelector("#form-input");
 const usernameInput = document.querySelector("#username-input");
-let input = document.querySelector("#username");
+const input = document.querySelector("#username");
 
 input.addEventListener("input", (e) => {
   if (input.value === "") {
-    h2.innerText = "Enter Your Username";
+    h2.innerText = "Username";
   } else {
     h2.innerText = `${input.value}`;
   }
 });
+
+// document.onkeydown.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let keyCode = "Enter";
+//   input.submit();
+//   formInput.appendChild(newUsername);
+//   input.style.visibility = "hidden";
+// });
