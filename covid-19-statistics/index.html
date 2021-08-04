@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>COVID-19-Statistiken</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/c19.svg" />
+        <p>Corona-Statistiken</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <div class="change-country">Change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src="images/close.png" alt="close-button" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">0</div>
+          </div>
+
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">0</div>
+          </div>
+
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <a></a>
+  </body>
+</html>
