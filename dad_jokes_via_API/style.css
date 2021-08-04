@@ -82,6 +82,7 @@ banner-text p {
   padding: 2rem;
   width: 60%;
   height: auto;
+  justify-self: center;
 }
 video {
   border-top-left-radius: 50px;
@@ -92,6 +93,10 @@ video {
     .container{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .video-wrapper{
+        width: 80%;
     }
 
 
