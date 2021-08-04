@@ -1,0 +1,36 @@
+.grid{
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    grid-gap: 1rem;
+} 
+
+header{
+/* //scroll-padding-top scroll-behaviour: smooth
+Greatt video as always! Here's my favourite 
+CSS Pro Tip: There's this obscure CSS property called
+ scroll-padding-top. When you have a sticky / 
+ fixed header, and you click an anchor link, it gets hidden 
+ under the sticky header. To avoid this annoying bug,
+  just give your body element scroll-padding-top equal 
+to the header height. Along with scroll-behaviour: smooth, 
+this will make it so that when you click an anchor link,
+ it'll scroll to it, such that it starts right beneath the
+  header instead of hidden under it, which is the intended 
+  behaviour!*/
+}
+
+video{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+article{
+    width: clamp(200px, 50%, 600px)
+}
+
+
+@media(prefers-color-scheme: dark){
+
+} 
+@media(prefers-color-scheme: light){
+
+}
