@@ -1,5 +1,5 @@
 //Country List Object
-let country_list = [
+let countryList = [
   { name: "USA", code: "US" },
   { name: "Spain", code: "ES" },
   { name: "Italy", code: "IT" },
@@ -210,22 +210,65 @@ const searchCountryElement = document.querySelector(".search-country");
 const countryListElement = document.querySelector(".country-list");
 const changeCountryBtn = document.querySelector(".change-country");
 const closeListBtn = document.querySelector(".close");
-const input = document.querySelector("#search-input")
+const input = document.querySelector("#search-input");
 
 //Create Country List
-function createCountryList(){
-  const num_countries = country_list.length;
+function createCountryList() {
+  const numCountries = countryList.length;
 
-  let i = 0, ul_list_id;
+  let i = 0,
+    ulListId;
 
-  country_list.forEach(country, index) => {
-    if(index % Math.ceil(num_countries/num_of_ul_lists)){
-      ul_list_id =`list-${i}`;
-      countryListElement.innerHTML += `<ul id="ul_list_id></ul>`;
-       i++;
+  countryList.forEach((country, index) => {
+    if (index % Math.ceil(numCountries / numOfUlLists) == 0) {
+      ulListId = `list-${i}`;
+      countryListElement.innerHTML += `<ul id='${ulListId}'></ul>`;
+      i++;
     }
-  }
+
+    document.querySelector(`#${ulListId}`).innerHTML += `
+    <li onclick= "fetchData('${country.name}')" id="${country.name}">
+      ${country.name}
+    </li>
+    `;
+  });
 }
 
-let num_of_ul_lists =3;
+let numOfUlLists = 3;
 createCountryList();
+
+//Show/Hide Country List
+changeCountryBtn.addEventListener("click", () => {
+  input.value = "";
+  resetCountryList();
+  searchCountryElement.classList.toggle("hide");
+  searchCountryElement.classList.add("fadeIn");
+});
+
+closeListBtn.addEventListener("click", () => {
+  searchCountryElement.classList.toggle("hide");
+});
+
+countryListElement.addEventListener("click", () => {
+  searchCountryElement.classList.toggle("hide");
+});
+
+// Country Filter (event when value changes )
+input.addEventListener("input", () => {
+  let value = input.value.toUpperCase();
+
+  countryList.forEach((country) => {
+    if (country.name.toUpperCase().startsWith(value)) {
+      document.getElementById(country.name).classList.remove("hide");
+    } else {
+      document.getElementById(country.name).classList.add("hide");
+    }
+  });
+});
+
+//Reset CountryList
+function resetCountryList() {
+  countryList.forEach((country) => {
+    document.getElementById(country.name).classList.remove("hide");
+  });
+}
