@@ -10,7 +10,7 @@ html {
   min-height: 100vh;
   max-width: 100%;
   font-size: 64.5%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 body {
@@ -32,13 +32,10 @@ body {
 }
 
 h1 {
-  color: #3a33c4;
-  backdrop-filter: saturate(100%) blur(1rem);
+  color: black;
   max-width: fit-content;
   justify-self: center;
-  border-radius: 2rem;
-  font-size: 2.5rem;
-  text-transform: uppercase;
+  font-size:3rem;
   margin: 0;
   padding: 1rem;
 }
@@ -57,10 +54,10 @@ h2 {
   min-width: clamp(2rem, 5vw, 5rem);
   border-top-left-radius: 7rem;
   border-bottom-right-radius: 7rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.084);
   color: #fff;
   font-weight: bold;
-  backdrop-filter: saturate(100%) blur(0.5rem);
+  backdrop-filter: saturate(100%) blur(0.2rem);
 }
 
 banner-text p {
@@ -73,7 +70,7 @@ banner-text p {
   max-width: 100px;
   margin: 2rem;
   padding: 1rem 2rem;
-  border: solid 3px #3a33c4;
+  border: solid 3px black;
   border-radius: 2rem;
   font-size: 1.25rem;
   text-decoration: none;
@@ -83,7 +80,7 @@ banner-text p {
 }
 
 .btn:hover, .btn:focus{
-  background-color: #3a33c4;
+  background-color: black;
   cursor: pointer;
 }
 
@@ -96,7 +93,6 @@ banner-text p {
   justify-self: center;
 }
 video {
-  border: solid 2px #3a33c4;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   width: 100%;
