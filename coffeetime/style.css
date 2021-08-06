@@ -156,10 +156,11 @@ h2 {
 
 /* //LOADER// */
 .hide{
-  display: none;
+display: none;
 }
 
 #coffee-loader {
+  display: none;
 background-color: #ecd2b7;
   height: 65px;
   width: 70px;
@@ -233,17 +234,7 @@ background-color: #ecd2b7;
       max-width: 800px;
       font-size: 2.5rem;
   }
-  @media screen and (min-width: 1024px) {
-    .body{
-      text-align-last: center;
-    }
   
-    .container {
-      display: inline-table;
-      margin: 5rem 10rem 10rem 10rem;
-      padding: 8rem;
-      text-align: -webkit-center;
-    }
    /* */
 /* .dropdown /
       opacity: 0;

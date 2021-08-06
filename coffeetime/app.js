@@ -15,10 +15,43 @@ setInterval(() => {
   sec.style.transform = `rotateZ(${ss}deg)`;
 });
 
-// let gag= gag || [];
-// gag.push(["setAccount", "UA-81139"]);
-// gag.push(["_trackPageview"]);
+//CLOCK End
 
-// function(){
-//     let ga= document.createElement("script")
-// }
+//COFFEE BUTTON
+const coffeeButton = document.querySelector("#coffee-btn");
+
+const getAnswer = async () => {
+  const answerOption = await coffeeGod();
+  answer.innerHTML = `${answerOption}`;
+};
+
+function coffeeGod() {
+  let dayTime = new Date().getHours();
+  if (dayTime >= 15) {
+    return (answer.innerHTML =
+      "Nö, sonst kannst du wieder nicht einschlafen...");
+  } else if (dayTime >= 4 && dayTime <= 8) {
+    return (answer.innerHTML = "Oh ja, den brauchst du jetzt auf jeden Fall!");
+  } else {
+    return (answer.innerHTML = "Ja, unbedingt! :)");
+  }
+}
+
+//LOADER
+const loader = document.querySelector("#coffee-loader");
+
+function load() {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+}
+
+coffeeButton.addEventListener("click", async () => {
+  loader.style.display = "block";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 1500);
+  setTimeout(getAnswer, 2000);
+});
+
+//LOADER End
