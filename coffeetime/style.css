@@ -22,6 +22,9 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+     "header clock"
+     "button content";
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -34,6 +37,7 @@ h1 {
   font-size: 2.5rem;
   margin: 0;
   padding: 1rem;
+  grid-area: header;
 }
 
 h2 {
@@ -43,6 +47,7 @@ h2 {
 }
 
 #coffee-btn {
+  grid-area: button;
   align-self: center;
   justify-self: center;
   max-width: max-content;
@@ -74,6 +79,8 @@ h2 {
   background: url(clock.png);
   background-size: cover;
   border-radius: 50%;
+  grid-area: clock;
+
   /* border: 15px solid white; */
   /* box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.2),
     0 0 0 4px rgba(255, 255, 255, 1); */
@@ -154,9 +161,9 @@ h2 {
 
 /* //CLOCK END */
 
-/* //LOADER// */
-.hide{
-display: none;
+/* //Content// */
+.content{
+  grid-area: content;
 }
 
 #coffee-loader {
@@ -206,13 +213,25 @@ background-color: #ecd2b7;
   
   h1{
     font-size: 2rem;
-    text-align: end;
+    text-align: center;
   } 
+
+  h2{
+    text-align: top;
+    padding-bottom:200px;
+  }
   
   .container {
       margin: 4rem;
+      text-align: center;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+      "clock"
+      "content"
+      "header"
+     "button" 
+     ;
     } 
   }
 

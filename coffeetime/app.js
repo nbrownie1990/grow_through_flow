@@ -19,6 +19,7 @@ setInterval(() => {
 
 //COFFEE BUTTON
 const coffeeButton = document.querySelector("#coffee-btn");
+const audio = document.querySelector(".coffee-sound");
 
 const getAnswer = async () => {
   const answerOption = await coffeeGod();
@@ -31,8 +32,10 @@ function coffeeGod() {
     return (answer.innerHTML =
       "Nö, sonst kannst du wieder nicht einschlafen...");
   } else if (dayTime >= 4 && dayTime <= 8) {
+    audio.play();
     return (answer.innerHTML = "Oh ja, den brauchst du jetzt auf jeden Fall!");
   } else {
+    audio.play();
     return (answer.innerHTML = "Ja, unbedingt! :)");
   }
 }
