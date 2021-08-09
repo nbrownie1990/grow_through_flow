@@ -22,6 +22,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  max-width: 100vw;
   grid-template-areas:
      "header clock"
      "button content";
@@ -206,7 +207,7 @@ background-color: #ecd2b7;
 
 /* //MEDIA QUERIES// */
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   body{
     background-position: top;
   }
