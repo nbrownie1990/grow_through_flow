@@ -6,10 +6,10 @@
 
  Never stop learning 🌱
  
- Mini-Projects:
+
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 01  | [Pricing Panel](https://github.com/nbrownie1990/grow_through_flow/tree/main/pricing_panel)                             | [Live Demo](https://xxx)               |
+| 01  | [Pricing Panel](https://github.com/nbrownie1990/grow_through_flow/tree/main/pricing_panel)                             | [Live Demo](https://nbrownie1990.github.io/grow_through_flow/pricing_panel/)               |
 | 02  | [Mint Museum](https://github.com/nbrownie1990/grow_through_flow/tree/main/mint_museum)                       | [Live Demo](https://xxx)     |
 | 03  | [Photo Blog](https://github.com/nbrownie1990/grow_through_flow/tree/main/photoblog)                               | [Live Demo](https://xxx)                |
 | 04  | [Guessing Game](https://github.com/nbrownie1990/grow_through_flow/tree/main/guessing_game)                          | [Live Demo](https://xxx)              |
