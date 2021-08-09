@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url(background.jpg);
+  background-image: url(resources/background.jpg);
   min-height: 100vh;
   max-width: 100%;
   background-size: cover;
@@ -76,7 +76,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(clock.png);
+  background: url(resources/clock.png);
   background-size: cover;
   border-radius: 50%;
   grid-area: clock;
