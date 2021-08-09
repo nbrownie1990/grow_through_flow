@@ -28,10 +28,10 @@ const getAnswer = async () => {
 
 function coffeeGod() {
   let dayTime = new Date().getHours();
-  if (dayTime >= 15) {
+  if (dayTime >= 15)
     return (answer.innerHTML =
       "Nö, sonst kannst du wieder nicht einschlafen...");
-  } else if (dayTime >= 4 && dayTime <= 8) {
+  else if (dayTime >= 4 && dayTime <= 8) {
     audio.play();
     return (answer.innerHTML = "Oh ja, den brauchst du jetzt auf jeden Fall!");
   } else {
