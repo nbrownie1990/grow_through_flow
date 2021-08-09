@@ -1,5 +1,5 @@
 body {
-  background: rgb(156, 225, 156);
+  background: #d4e09b;
   font-family: "Nunito", sans-serif;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .navbar .scrolled {
-  background: rgb(166, 232, 225);
+  background: rgba(166, 232, 225, 0.7);
   transition: background 0.8s;
 }
 
