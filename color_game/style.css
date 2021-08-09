@@ -5,6 +5,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  min-height: 100vh;
   align-items: center;
   justify-self: center;
   justify-content: center;
@@ -176,6 +177,8 @@ button:hover {
   .palette-container {
     margin: 1rem;
     padding: 0.3rem;
+    justify-content: center;
+    justify-self: center;
   }
   #message {
     padding: 2rem 0 0 1.3rem;
