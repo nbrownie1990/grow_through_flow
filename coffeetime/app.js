@@ -29,11 +29,11 @@ const getAnswer = async () => {
 function coffeeGod() {
   let dayTime = new Date().getHours();
   if (dayTime >= 15)
-    return (answer.innerHTML =
-      "Nö, sonst kannst du wieder nicht einschlafen...");
+    return (answer.innerHTML = `Nö, sonst kannst <br> du wieder nicht <br> einschlafen...`);
   else if (dayTime >= 4 && dayTime <= 8) {
     audio.play();
-    return (answer.innerHTML = "Oh ja, den brauchst du jetzt auf jeden Fall!");
+    return (answer.innerHTML =
+      "Oh ja, <br> den brauchst du jetzt <br> auf jeden Fall!");
   } else {
     audio.play();
     return (answer.innerHTML = "Ja, unbedingt! :)");
