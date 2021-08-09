@@ -5,6 +5,7 @@ body {
   font-size: 64.5%;
   font-family: "Slabo 13px", serif;
   width: 100%;
+  min-height: 100vh;
 }
 
 .container {
