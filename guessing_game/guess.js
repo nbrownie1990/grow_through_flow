@@ -1,9 +1,9 @@
 // JavaScript
 function startGame() {
   alert("Willkommen beim Zahlenratespiel :)");
-  let maximum = parseInt(prompt("Gebe deine Höchstzahl ein!"));
+  let maximum = parseInt(prompt("Gib deine Höchstzahl ein."));
   while (!maximum) {
-    maximum = parseInt(prompt("Gib bitte eine valide Zahl ein."));
+    maximum = parseInt(prompt("Gib bitte eine valide Zahl ein!"));
   }
 
   const targetNum = Math.floor(Math.random() * maximum) + 1;
