@@ -183,6 +183,7 @@ button:hover {
   #message {
     padding: 2rem 0 0 1.3rem;
     font-size: 1.5rem;
+    align-self: end;
   }
   #color-display {
     color: white;
