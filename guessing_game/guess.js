@@ -1,13 +1,14 @@
 // JavaScript
 function startGame() {
-  let maximum = parseInt(prompt("Enter your max-number!"));
+  alert("Willkommen beim Zahlenratespiel :)");
+  let maximum = parseInt(prompt("Gebe deine Höchstzahl ein!"));
   while (!maximum) {
-    maximum = parseInt(prompt("Enter a valid number!"));
+    maximum = parseInt(prompt("Gib bitte eine valide Zahl ein."));
   }
 
   const targetNum = Math.floor(Math.random() * maximum) + 1;
 
-  let guess = parseInt(prompt("Enter your first guess:"));
+  let guess = parseInt(prompt("Gib deine erste Schätzung ab:"));
   let attempts = 1;
 
   while (parseInt(guess) !== targetNum) {
@@ -15,20 +16,20 @@ function startGame() {
     attempts++;
     if (guess > targetNum) {
       guess = prompt(
-        "Too high! Enter new guess: (you can quit the game by typing 'quit')"
+        "Zu hoch! Versuch es nochmal: (Du kannst das Spiel beenden mit 'quit')"
       );
     } else {
       guess = prompt(
-        "Too low! Enter a new guess: (you can quit the game by typing 'quit')"
+        "Zu hoch! Versuch es nochmal: (Du kannst das Spiel beenden mit 'quit')"
       );
     }
   }
   if (guess === "quit") {
-    alert("OK, You Quit");
+    alert("OK, beendet");
   } else {
-    alert("Congrats you win!");
+    alert("Glückwunsch du hast gewonnen!");
 
     let answerElement = document.getElementById("winner");
-    answerElement.innerText = `WINNER\n Your guess ${guess} is right!! \n You tried it ${attempts} times`;
+    answerElement.innerText = `Gewonnen!\n Deine Schätzung ${guess} ist richtig!! \n Du hast ${attempts} Versuche gebraucht`;
   }
 }
