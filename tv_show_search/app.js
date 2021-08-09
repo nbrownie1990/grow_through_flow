@@ -1,7 +1,9 @@
 const form = document.querySelector("#searchForm");
-form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  searchShows();
+  const searchTerm = form.elements.query.value;
+  const config = { params: { q: searchTerm } };
+  const res = await axios.get(`https://api.tvmaze.com/search/shows?`, config);
   displayImages(res.data);
   form.elements.query.value = "";
 });
@@ -16,15 +18,12 @@ const displayImages = (shows) => {
   }
 };
 
-const searchShows = async () => {
-  const searchTerm = form.elements.query.value;
-  try {
-    const config = { params: { q: searchTerm } };
-    const res = await axios.get(`https://api.tvmaze.com/search/shows?`, config);
-    console.log(res.data);
-  } catch (e) {
-    return "no jokes available :( Sorry!";
-  }
-};
+// const searchShows = async () => {
+//   try {
+//     console.log(res.data);
+//   } catch (e) {
+//     return "no jokes available :( Sorry!";
+//   }
+// };
 
 //   function die die bilder wieder löscht
