@@ -25,8 +25,8 @@ function setupLevelButtons() {
       levelButtons[1].classList.remove("selected");
       this.classList.add("selected");
       this.textContent === "Easy"
-        ? ((numPalettes = 3), (paletteContainer.style.height = "4rem"))
-        : ((numPalettes = 6), (paletteContainer.style.height = "8rem"));
+        ? ((numPalettes = 3), (paletteContainer.style.height = "9rem"))
+        : ((numPalettes = 6), (paletteContainer.style.height = "17rem"));
       reset();
     });
   }
