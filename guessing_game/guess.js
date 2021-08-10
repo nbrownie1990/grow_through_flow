@@ -1,7 +1,7 @@
 // JavaScript
 function startGame() {
   alert(
-    "Willkommen beim Zahlenratespiel So geht's: Du musst eine Zahl mit möglichst wenigen Versuchen erraten. Dafür gibst du zunächst den Maximalwert an. Dann wird eine Zufallszahl zwischen 0 und dem Maximalwert generiert, die es zu erraten gilt. Viel Spaß! "
+    "Willkommen beim Zahlenratespiel! So geht's: Du musst eine Zahl mit möglichst wenigen Versuchen erraten. Dafür gibst du zunächst den Maximalwert an. Dann wird eine Zufallszahl zwischen 0 und dem Maximalwert generiert, die es zu erraten gilt. Viel Spaß! "
   );
   let maximum = parseInt(prompt("Gib den Maximalwert ein."));
   while (!maximum) {
@@ -22,7 +22,7 @@ function startGame() {
       );
     } else {
       guess = prompt(
-        "Zu hoch! Versuch es nochmal: (Du kannst das Spiel beenden mit 'quit')"
+        "Zu niedrig! Versuch es nochmal: (Du kannst das Spiel beenden mit 'quit')"
       );
     }
   }
