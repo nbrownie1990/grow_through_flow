@@ -2,44 +2,48 @@
 1. Global Styles
 2. Typography
 3. Components
-3.1 Buttons
-4. Layout
+4. Layout @Media-Queries 
 ========*/
 
-/* ====== Global Styles
+/* ====== 1. Global Styles
  ===========================*/
-/* ====== Typography
- ===========================*/
+#headingGroup h1 {
+  font-size: 4rem;
+  font-weight: 100;
+}
 
-/* ====== Layouts 
-============================*/
-/* ====== Components Styles 
- =============================*/
+#headingGroup span {
+  color: hsl(70, 53%, 74%);
+}
+
 body {
-  background: #d8f3dc;
+  background: hsl(129, 53%, 90%);
   font-family: "Nunito", sans-serif;
 }
-
-.content {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
+/* ====== 2. Typography
+ ===========================*/
 .museum h2 {
-  color: #2d6a4f;
+  color: hsl(153, 40%, 30%);
   font-size: 2.5rem;
   font-weight: 100;
 }
 
 .museum h3 {
   font-size: 3rem;
-  color: #d4e09b;
+  color: hsl(70, 53%, 74%);
 }
 
 .museum p {
-  color: #2d6a4f;
+  color: hsl(153, 40%, 30%);
   font-size: 1.5rem;
   font-weight: 100;
+}
+
+/* ====== 3. Components  
+============================*/
+.content {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #mainNavbar {
@@ -48,29 +52,22 @@ body {
 }
 
 #mainNavbar .nav-link:hover {
-  color: #2d6a4f;
+  color: hsl(153, 40%, 30%);
 }
 
 #mainNavbar .navbar-brand {
   font-size: 1.8rem;
-  color: #2d6a4f;
-}
-
-#headingGroup h1 {
-  font-size: 4rem;
-  font-weight: 100;
-}
-
-#headingGroup span {
-  color: #d4e09b;
+  color: hsl(153, 40%, 30%);
 }
 
 .navbar .scrolled {
-  background-color: rgba(166, 232, 225, 0.7);
+  background-color: hsla(174, 59%, 78%, 0.702);
   transition: background 0.8s;
 }
 
-@media (max-width: 1200px) {
+/* ====== 4. Layout @Media-Queries 
+ =============================*/
+@media screen and (max-width: 1200px) {
   #headingGroup h1 {
     font-size: 2rem;
   }
