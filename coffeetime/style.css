@@ -1,44 +1,66 @@
+/* ====== table of contents 
+1. Global Styles
+2. Typography
+3. Components
+3.1 Buttons
+4. Layout
+========*/
+
+
+/* ====== Global Styles
+ ===========================*/
+/* ====== Typography
+ ===========================*/
+
+/* ====== Layouts 
+============================*/
+ /* ====== Components Styles 
+ =============================*/
+
+
 * {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 body {
-  background-image: url(resources/background.jpg);
-  min-height: 100vh;
-  max-width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
   /* font-size: 64.5%; */
+  align-items: center;
+  background-image: url(resources/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 .container {
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 100vw;
   grid-template-areas:
      "header clock"
      "button content";
   justify-content: center;
   justify-items: center;
-  align-items: center;
+  max-width: 100vw;
+
+  
 }
 
 h1 {
   color: #54423e;
-  max-width: fit-content;
-  justify-self: center;
   font-size: 2.5rem;
-  margin: 0;
-  padding: 1rem;
   grid-area: header;
+  justify-self: center;
+  margin: 0;
+  max-width: fit-content;
+  padding: 1rem;
 }
 
 h2 {
@@ -48,18 +70,18 @@ h2 {
 }
 
 #coffee-btn {
-  grid-area: button;
   align-self: center;
-  justify-self: center;
-  max-width: max-content;
-  margin: 2rem;
-  padding: 1rem 2rem;
-  border: solid 3px #54423e;
-  border-radius: 2rem;
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: rgb(128, 92, 92);
   background-color: #54423e29;
+  border-radius: 2rem;
+  border: solid 3px #54423e;
+  color: rgb(128, 92, 92);
+  font-size: 1.25rem;
+  grid-area: button;
+  justify-self: center;
+  margin: 2rem;
+  max-width: max-content;
+  padding: 1rem 2rem;
+  text-decoration: none;
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -72,15 +94,15 @@ h2 {
 
 /* //CLOCK// */
 .clock {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background: url(resources/clock.png);
   background-size: cover;
+  background: url(resources/clock.png);
   border-radius: 50%;
+  display: flex;
   grid-area: clock;
+  height: 350px;
+  justify-content: center;
+  width: 350px;
 
   /* border: 15px solid white; */
   /* box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.2),
@@ -88,12 +110,12 @@ h2 {
 }
 
 .clock::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
   background: #54423e;
   border-radius: 50%;
+  content: "";
+  height: 15px;
+  position: absolute;
+  width: 15px;
   z-index: 100;
 }
 
@@ -105,39 +127,39 @@ h2 {
 
 .hour,
 .hr {
-  width: 160px;
   height: 160px;
+  width: 160px;
 }
 
 .minute,
 .min {
-  width: 190px;
   height: 190px;
+  width: 190px;
 }
 
 .second,
 .sec {
-  width: 230px;
   height: 230px;
+  width: 230px;
 }
 
 .hr,
 .min,
 .sec {
-  position: absolute;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
-  border-radius: 50%;
+  position: absolute;
 }
 
 .hr::before {
+  background-color: #54423e;
+  border-radius: 6px 6px 0 0;
   content: "";
+  height: 80px;
   position: absolute;
   width: 8px;
-  height: 80px;
-  background-color: #54423e;
   z-index: 10;
-  border-radius: 6px 6px 0 0;
 }
 
 .min::before {
@@ -151,13 +173,13 @@ h2 {
 }
 
 .sec::before {
+  background-color: #54423e;
+  border-radius: 6px 6px 0 0;
   content: "";
+  height: 150px;
   position: absolute;
   width: 2px;
-  height: 150px;
-  background-color: #54423e;
   z-index: 12;
-  border-radius: 6px 6px 0 0;
 }
 
 /* //CLOCK END */
@@ -168,15 +190,8 @@ h2 {
 }
 
 #coffee-loader {
-  display: none;
-background-color: #ecd2b7;
-  height: 65px;
-  width: 70px;
-  border: 10px solid #ecd2b7;
-  box-shadow: 0 0 0 10px #fff0d4;
-  margin: auto;
-  position: relative;
-  border-radius: 0 0 110px 110px;
+  animation: fill 2s infinite;
+  background-color: #ecd2b7;
   background-image: linear-gradient(
     0deg,
     #54423e 0,
@@ -186,17 +201,24 @@ background-color: #ecd2b7;
   );
   background-size: 150px 150px;
   background-position: 0 0;
-  animation: fill 2s infinite;
+  border-radius: 0 0 110px 110px;
+  border: 10px solid #ecd2b7;
+  box-shadow: 0 0 0 10px #fff0d4;
+  display: none;
+  height: 65px;
+  margin: auto;
+  position: relative;
+  width: 70px;
 }
 
 #coffee-loader:before {
-  position: absolute;
+  border-radius: 0 40px 40px 0;
+  border: 10px solid #fff0d4;
   content: "";
   height: 20px;
-  width: 25px;
-  border: 10px solid #fff0d4;
-  border-radius: 0 40px 40px 0;
+  position: absolute;
   right: -55px;
+  width: 25px;
 }
 @keyframes fill {
   100% {
@@ -218,14 +240,13 @@ background-color: #ecd2b7;
   } 
 
   h2{
-    text-align: top;
     font-size: 1.2rem;
     padding-bottom:200px;
+    text-align: top;
   }
   
   .container {
-      margin: 4rem;
-      text-align: center;
+      
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas:
@@ -234,17 +255,19 @@ background-color: #ecd2b7;
       "header"
      "button" 
      ;
+     margin: 4rem;
+      text-align: center;
     } 
   }
 
   @media screen and (min-width: 768px) {
     .container {
-      margin: 4rem;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas:
      "header clock"
      "button content";
+     margin: 4rem;
     }
   
     h1{
@@ -255,8 +278,8 @@ background-color: #ecd2b7;
       font-size: 2.5rem;
     }
     .btn {
-      max-width: 800px;
       font-size: 2.5rem;
+      max-width: 800px;
   }
   
    /* */
