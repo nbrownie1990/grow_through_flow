@@ -2,120 +2,57 @@
 1. Global Styles
 2. Typography
 3. Components
-3.1 Buttons
-4. Layout
+  3.1 Buttons
+  3.2 Color-Palette
+  3.3 Gifs
+4. Layout @Media-Queries 
 ========*/
 
 
-/* ====== Global Styles
+/* ====== 1. Global Styles
  ===========================*/
-/* ====== Typography
- ===========================*/
-
-/* ====== Layouts 
-============================*/
- /* ====== Components Styles 
- =============================*/
-body {
+ body {
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Odibee Sans", cursive;
   font-size: 64.5%;
-  background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  align-items: center;
-  justify-self: center;
   justify-content: center;
+  justify-self: center;
+  min-height: 100vh;
+  width: 100%;
 }
-
 footer {
   text-align: center;
 }
 
-.container {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: auto;
-  height: max-content;
-  border-radius: 1.5rem;
-  margin: 2rem 2rem 0 2rem;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  line-height: 1.1;
-  font-weight: normal;
-  color: steelblue;
-  background: black;
+/* ====== 2. Typography
+ ===========================*/
+ h1 {
+  background: hsl(0, 0%, 0%);
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+  color: hsl(207, 44%, 49%);
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.1;
   margin: 0;
   padding: 2rem;
-  text-transform: uppercase;
-}
-
-.line {
-  background: rgba(0, 0, 0, 0.5);
-  height: auto;
-  padding: 1rem 0;
-  font-size: 1rem;
-  justify-content: space-between;
   text-align: center;
-  color: black;
-}
-
-.palette-container {
-  background: black;
-
-  height: 8rem;
-  border-radius: 2.5rem;
-  margin: 2rem;
-  padding: 2rem;
-}
-
-.palette {
-  width: 30%;
-  background: black;
-  padding-bottom: 3rem;
-  float: left;
-  margin: 1.66%;
-  border-radius: 2.5rem;
-  transition: background 0.6s;
-  -webkit-transition: background 0.6s;
-  -moz-transition: background 0.6s;
-}
-
-.palette:hover {
-  cursor: pointer;
-}
-
-.selected {
-  color: steelblue;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-button {
-  border: none;
-  background: none;
   text-transform: uppercase;
-  height: 100%;
-  font-weight: 700;
-  color: steelblue;
-  letter-spacing: 1px;
-  font-size: inherit;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  outline: none;
 }
 
-button:hover {
-  color: white;
-  background: steelblue;
-  transform: scale(1.1);
-  cursor: url(images/rubik.png), auto;
+/* ====== 3. Components  
+============================*/
+.container {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 1.5rem;
+  height: max-content;
+  margin: 2rem 2rem 0 2rem;
+  width: auto;
 }
+
 .grid--1x2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -123,10 +60,92 @@ button:hover {
   margin-bottom: 2rem ;
 }
 
+.line {
+  background: hsla(0, 0%, 0%, 0.5);
+  color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  height: auto;
+  justify-content: space-between;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* === 3.1 Buttons === */
+
+button {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  background: none;
+  border: none;
+  color: hsl(207, 44%, 49%);
+  font-size: inherit;
+  font-weight: 700;
+  height: 100%;
+  letter-spacing: 1px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: hsl(207, 44%, 49%);
+  color: hsl(0, 0%, 100%);
+  cursor: url(images/rubik.png), auto;
+  transform: scale(1.1);
+}
+
+/* === 3.2 Color-Palette === */
+.palette-container {
+  background: hsl(0, 0%, 0%);
+  border-radius: 2.5rem;
+  height: 8rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.palette {
+  -moz-transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+  background: hsl(0, 0%, 0%);
+  border-radius: 2.5rem;
+  float: left;
+  margin: 1.66%;
+  padding-bottom: 3rem;
+  transition: background 0.6s;
+  width: 30%;
+}
+
+.palette:hover {
+  cursor: pointer;
+}
+
+.selected {
+  background: hsla(0, 0%, 0%, 0.8);
+  color: hsl(207, 44%, 49%);
+}
+
+#color-display {
+  color: hsl(0, 0%, 100%);
+  font-size: 4rem;
+}
+
+#message {
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  transform: translate(-3.5rem, -.5rem);
+}
+#win {
+  display: none;
+}
+
+/* === 3.3 Gifs === */
 .giphy img {
-  width: 50%;
-  position: relative;
   align-self: center;
+  position: relative;
+  width: 50%;
 }
 
 .brain {
@@ -134,26 +153,25 @@ button:hover {
   max-width: 15rem;
 }
 
-
-
-#color-display {
-  color: white;
-  font-size: 4rem;
-}
-
-#message {
-  position: absolute;
-  transform: translate(-3.5rem, -.5rem);
-  color: white;
-  display: inline-block;
-  font-size: 2.5rem;
-  padding-bottom: 1rem;
-}
-#win {
-  display: none;
-}
+ /* ====== 4. Layout @Media-Queries 
+ =============================*/
 
 @media screen and (max-width: 320px) {
+  .container{
+    height: 25rem;
+    width: 85%;
+  }
+  
+  .line{
+    padding-bottom: 2rem;
+  }
+  
+  .grid--1x2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+  }
+
   h1 {
     font-size: 1.5rem;
     padding: 1.5rem 2rem 0.5rem;
@@ -162,42 +180,31 @@ button:hover {
   button{
     margin-bottom: 2rem;
   }
-  .container{
-    width: 85%;
-    height: 25rem;
-  }
-  .line{
-    padding-bottom: 2rem;
-  }
-  .cards {
-    margin-top: -2rem;
-    transform: translate(0rem, 0.5rem);
+
+  .palette-container {
+    justify-content: center;
+    justify-self: center;
+    margin: 1rem;
+    padding: 0.3rem;
   }
 
-  .grid--1x2 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: repeat(2, 1fr); 
+  #message {
+    align-self: end;
+    font-size: 1.5rem;
+    padding: 2rem 0 0 1.3rem;
+  }
+
+  #color-display {
+    color: white;
+    font-size: 2rem;
   }
 
   .brain {
     max-width: 7rem;
     padding-left: 6.5rem;
-
   }
 
-    .palette-container {
-    margin: 1rem;
-    padding: 0.3rem;
-    justify-content: center;
-    justify-self: center;
+  .cards {
+    margin-top: -2rem;
+    transform: translate(0rem, 0.5rem);
   }
-  #message {
-    padding: 2rem 0 0 1.3rem;
-    font-size: 1.5rem;
-    align-self: end;
-  }
-  #color-display {
-    color: white;
-    font-size: 2rem;
-}
