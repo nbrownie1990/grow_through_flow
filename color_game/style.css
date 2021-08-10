@@ -176,10 +176,8 @@ button:hover {
  /* ====== 4. Layout @Media-Queries 
  =============================*/
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 768px) {
   .container{
-    min-height: max-content;
-    width: max-content;
     justify-self: center; 
     justify-content: center; }
   
