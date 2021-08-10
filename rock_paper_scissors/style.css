@@ -54,6 +54,9 @@ html {
 #computer-choice-display{
   color: hsl(6, 93%, 71%);
 }
+#computer-choice-display{
+  color: hsl(120, 100%, 20%);
+}
 
 /* ====== 3. Components  
 ============================*/
