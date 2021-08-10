@@ -2,21 +2,15 @@
 1. Global Styles
 2. Typography
 3. Components
-3.1 Buttons
-4. Layout
+  3.1 Buttons
+  3.2 Inputs
+4. Layout @Media-Queries 
 ========*/
 
 
-/* ====== Global Styles
+/* ====== 1. Global Styles
  ===========================*/
-/* ====== Typography
- ===========================*/
-
-/* ====== Layouts 
-============================*/
- /* ====== Components Styles 
- =============================*/
-body {
+ body {
   background-image: url(images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,9 +19,60 @@ body {
   min-height: 100vh;
   width: 100%;
 }
-
-h1 {
+/* ====== 2. Typography
+ ===========================*/
+ h1 {
   font-size: 2rem;
+  text-align: center;
+}
+/* ====== 3. Components  
+============================*/
+.grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  justify-content: center;
+}
+
+.container {
+  background-color: hsla(0, 33%, 98%, 0.65);
+  border-radius: 1.25rem;
+  margin: 2rem;
+  padding: 2rem;
+  width: auto;
+}
+
+/* === 3.1 Buttons === */
+.btn {
+  background-color: hsl(120, 52%, 24%);
+  border-radius: 0.5rem;
+  border: 1px solid hsl(120, 37%, 41%);
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-family: "Slabo 13px", serif;
+  margin: 1rem;
+  padding: 0.5rem 2.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(120, 52%, 24%);
+}
+
+.delete-btn {
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.fas {
+  pointer-events: none;
+}
+/* === 3.2 Inputs === */
+form {
   text-align: center;
 }
 
@@ -40,28 +85,9 @@ input {
   width: 155px;
 }
 
-.container {
-  background-color: rgba(252, 249, 249, 0.65);
-  border-radius: 1.25rem;
-  margin: 2rem;
-  padding: 2rem;
-  width: auto;
-}
-
-.grid {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(2, 2fr);
-  justify-content: center;
-}
-
-form {
-  text-align: center;
-}
 .listArea {
   align-self: center;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 0.5rem;
   font-size: 1rem;
   justify-self: center;
@@ -69,6 +95,7 @@ form {
   min-width: 190px;
   padding: 0.5rem;
 }
+
 li {
   display: list-item;
   text-align: -webkit-match-parent;
@@ -83,34 +110,8 @@ label {
   text-align: center;
 }
 
-.btn {
-  background-color: rgb(29, 92, 29);
-  border-radius: 0.5rem;
-  border: 1px solid rgb(66, 145, 66);
-  color: white;
-  display: inline-block;
-  font-family: "Slabo 13px", serif;
-  margin: 1rem;
-  padding: 0.5rem 2.5rem;
-  transition: background-color 200ms ease-in-out;
-}
-
-.btn:hover {
-  background-color: white;
-  color: rgb(29, 92, 29);
-}
-
-.delete-btn {
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-}
-.fas {
-  pointer-events: none;
-}
-
+/* ====== 4. Layout @Media-Queries 
+ =============================*/
 @media screen and (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
