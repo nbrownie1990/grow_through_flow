@@ -125,6 +125,7 @@ function reset() {
   userScoreDisplay.textContent = 0;
   computerScore = 0;
   computerScoreDisplay.textContent = 0;
+  computerChoiceDisplay.textContent = "";
   userScoreDisplay.classList.remove("winner", "loser");
   computerScoreDisplay.classList.remove("winner", "loser");
   resultDisplay.classList.remove("winner", "loser");

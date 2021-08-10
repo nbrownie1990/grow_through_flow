@@ -27,23 +27,40 @@ html {
   background: url(images/background.jpeg) no-repeat center center fixed;
   font-size: 64.5%;
   text-align: center;
+  min-height: 100vh;
+  max-width: 100%;
 }
 /* ====== 2. Typography
  ===========================*/
 .page-title {
   align-self: center;
   font-family: var(--font-family);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .title {
   font-family: var(--font-fam-sec);
 }
+#computer,
+#username-input{
+  margin:0;
+  font-size: 1em;
+}
+
+#text{
+  font-size: .5em;
+}
+
+#computer-choice-display{
+  color: hsl(6, 93%, 71%);
+}
+
 /* ====== 3. Components  
 ============================*/
 .button {
   font-family: var(--font-fam-sec);
   margin-left: 0.5rem;
+  display: inline-block;
 }
 
 label,
@@ -52,7 +69,23 @@ label,
   font-family: var(--font-family);
 }
 
+.box{
+  min-height: 245px;
+
+}
+.media-content{
+  min-height: 10rem;
+  max-height: 14rem;
+  flex-shrink: 0;
+}
+
+
+#username{
+  max-width: 100px;
+}
+
 img {
+  background-image: url(images/rps.gif)
   background-color: var(--btn-color);
   border-radius: 2.5rem;
 }
@@ -90,3 +123,6 @@ img {
 }
 /* ====== 4. Layout @Media-Queries 
  =============================*/
+/* @media screen and (min-width: 768px) {
+ 
+} */
