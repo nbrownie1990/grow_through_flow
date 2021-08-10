@@ -176,20 +176,17 @@ button:hover {
  /* ====== 4. Layout @Media-Queries 
  =============================*/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 350px) {
   .container{
     min-height: max-content;
     width: max-content;
-    justify-self: center;  }
+    justify-self: center; 
+    justify-content: center; }
   
   .line{
     padding: 1rem 0;  
   }
   
-  .grid--1x2 {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-
   h1 {
     font-size: 2rem;
     padding: 2rem;
@@ -200,13 +197,22 @@ button:hover {
   }
 
   .palette-container {
-    margin: 2rem;
-    padding: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+  }
+  
+  .palette {
+    float: none;
+    height: -webkit-fill-available;
+    margin: 4em 1em;
   }
 
   #message {
     font-size: 2.5rem;
     padding-bottom: 1rem;
+    transform: translate(-4.5rem, -4.5rem);
+
   }
 
   #color-display {
@@ -216,9 +222,10 @@ button:hover {
   .brain {
     max-width: 15rem;
     padding-left: 2rem;
+    justify-self: center;
   }
 
   .cards {
-    margin-top: -2rem;
+    margin-top: 1.5rem;
     transform: translate(0rem, 0.5rem);
   }
