@@ -2,19 +2,11 @@
 1. Global Styles
 2. Typography
 3. Components
-3.1 Buttons
-4. Layout
+4. Layout @Media-Queries 
 ========*/
 
-/* ====== Global Styles
+/* ====== 1. Global Styles
  ===========================*/
-/* ====== Typography
- ===========================*/
-
-/* ====== Layouts 
-============================*/
-/* ====== Components Styles 
- =============================*/
 *,
 *::before,
 *::after {
@@ -22,34 +14,36 @@
 }
 
 :root {
-  --font-family: "Palette Mosaic", cursive;
+  --btn-color: hsl(6, 93%, 71%);
   --font-fam-sec: "Oswald", sans-serif;
-  --btn-color: salmon;
+  --font-family: "Palette Mosaic", cursive;
 }
 
 html {
-  background: url(images/background.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
   background-size: cover;
-  text-align: center;
+  background: url(images/background.jpeg) no-repeat center center fixed;
   font-size: 64.5%;
+  text-align: center;
 }
-
-img {
-  background-color: var(--btn-color);
-  border-radius: 2.5rem;
-}
+/* ====== 2. Typography
+ ===========================*/
 .page-title {
+  align-self: center;
   font-family: var(--font-family);
   font-size: 2rem;
-  align-self: center;
 }
 
-.button {
-  margin-left: 0.5rem;
+.title {
   font-family: var(--font-fam-sec);
+}
+/* ====== 3. Components  
+============================*/
+.button {
+  font-family: var(--font-fam-sec);
+  margin-left: 0.5rem;
 }
 
 label,
@@ -58,23 +52,13 @@ label,
   font-family: var(--font-family);
 }
 
-#playto {
-  margin-left: 0.5rem;
-  font-family: var(--font-fam-sec);
-}
-
-#reset {
+img {
   background-color: var(--btn-color);
-}
-#game {
-  font-family: var(--font-fam-sec);
-}
-.title {
-  font-family: var(--font-fam-sec);
+  border-radius: 2.5rem;
 }
 
 .winner {
-  color: darkgreen;
+  color: hsl(120, 100%, 20%);
 }
 
 .loser {
@@ -92,3 +76,17 @@ label,
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
+
+#playto {
+  font-family: var(--font-fam-sec);
+  margin-left: 0.5rem;
+}
+
+#reset {
+  background-color: var(--btn-color);
+}
+#game {
+  font-family: var(--font-fam-sec);
+}
+/* ====== 4. Layout @Media-Queries 
+ =============================*/
