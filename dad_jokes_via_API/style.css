@@ -46,7 +46,7 @@ h2 {
 body {
   -webkit-background-size: cover;
   align-items: center;
-  background-image: url(images/background.jpg);
+  background-image: url(images/background.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
