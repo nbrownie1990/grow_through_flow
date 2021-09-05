@@ -24,7 +24,9 @@ html {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  background: url(images/background.jpeg) no-repeat center center fixed;
+  background: url(images/background.webp
+
+) no-repeat center center fixed;
   font-size: 64.5%;
   text-align: center;
   min-height: 100vh;
