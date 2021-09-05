@@ -22,7 +22,7 @@
 body {
   /* font-size: 64.5%; */
   align-items: center;
-  background-image: url(resources/background.jpg);
+  background-image: url(resources/background.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
