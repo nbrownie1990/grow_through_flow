@@ -18,9 +18,9 @@
 | 07  | [Dad Jokes Generator](https://github.com/nbrownie1990/grow_through_flow/tree/main/dad_jokes_via_API)                       | [Live Demo](https://nbrownie1990.github.io/grow_through_flow/dad_jokes_via_API/)              |
 | 08  | [Rock Paper Scissors](https://github.com/nbrownie1990/grow_through_flow/tree/main/rock_paper_scissors)                                         | [Live Demo](https://nbrownie1990.github.io/grow_through_flow/rock_paper_scissors/)                      |
 | 09  | [Coffee Time](https://github.com/nbrownie1990/grow_through_flow/tree/main/coffeetime)                                     | [Live Demo](https://nbrownie1990.github.io/grow_through_flow/coffeetime/)                      |
-| 10  | [TV Show Search](https://github.com/nbrownie1990/grow_through_flow/tree/main/tv_show_search)                                         | [Live Demo](https://nbrownie1990.github.io/grow_through_flow/tv_show_search/)                       |
-
-
+<!---
+ | 10  | [TV Show Search](https://github.com/nbrownie1990/grow_through_flow/tree/main/tv_show_search)                                         | [Live Demo](https://nbrownie1990.github.io/grow_through_flow/tv_show_search/)                       |
+--->
 
 
 
